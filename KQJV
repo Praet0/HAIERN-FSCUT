@@ -1,0 +1,4137 @@
+getgenv().PTR = {}
+getgenv().ESP = {
+	Boxes = false,
+	HealthBar = false,
+	ShowHealth = false,
+	Name = false,
+	DisplayDistance = false,
+	Default = true,
+	DistancefromCharacter = false,
+	DistancefromCamera = false,
+	VisibleCheck = false,
+	TeamCheck = false,
+	Dropped = false
+
+}
+
+getgenv().AimbotKeyBind = Enum.UserInputType.MouseButton2
+getgenv().Aimbot = {
+	AimbotEnabled = false,
+	TeamCheck = false,
+	VisibleCheck = false,
+	AimPart = "Head",
+	Sensitivity = 0,
+	IgnoreFOV = false,
+}
+getgenv().AimbotFOV = {
+	CircleSides = 64,
+	CircleColor = Color3.fromRGB(80, 80, 255),
+	CircleTransparency = 0.7,
+	CircleRadius = 0,
+	CircleFilled = false,
+	CircleVisible = true,
+	CircleThickness = 1
+}
+
+getgenv().SilentAim = {
+	SilentAim = false,
+	MissChance = 0,
+	Miss = false,
+	HitHead = true,
+	HitHRP = false,
+	HitRandom = false,
+	HitDropped = false
+}
+
+
+
+getgenv().Rainbow_On = true
+getgenv().Rainbow_Off = false
+getgenv().OutLineColor = Color3.fromRGB(50,50,50)
+getgenv().AccentColor = Color3.fromRGB(40,50,200)
+getgenv().MainColor = Color3.fromRGB(28,28,28)
+getgenv().BackGroundColor = Color3.fromRGB(20,20,20)
+
+
+
+
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local OpenButton = Instance.new("TextButton")
+local MainLoginFrame = Instance.new("Frame")
+local CloseButton = Instance.new("TextButton")
+local LoginButton = Instance.new("TextButton")
+local PasswordBox = Instance.new("TextBox")
+local UsernameBox = Instance.new("TextBox")
+local LoginTitle = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local BBFrame = Instance.new("Frame")
+local Holder = Instance.new("Frame")
+local Outline = Instance.new("Frame")
+local MainFrame = Instance.new("Frame")
+local SecondaryFrame = Instance.new("Frame")
+local MiscFrame = Instance.new("Frame")
+local WelcomeFrame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local WelcomeLabel = Instance.new("TextLabel")
+local SettingsFrame = Instance.new("Frame")
+local UISettings = Instance.new("Frame")
+local Theme = Instance.new("TextLabel")
+local BBC = Instance.new("TextLabel")
+local BackGroundColor = Instance.new("TextButton")
+local MainColor = Instance.new("TextLabel")
+local MainColor_2 = Instance.new("TextButton")
+local OutlineColor = Instance.new("TextLabel")
+local OutlineColor_2 = Instance.new("TextButton")
+local AccentColor = Instance.new("TextLabel")
+local AccentColor_2 = Instance.new("TextButton")
+local RainbowAccentColor = Instance.new("TextLabel")
+local ColorChangeon = Instance.new("TextButton")
+local ColorChangeoff = Instance.new("TextButton")
+local ALED3 = Instance.new("Frame")
+local Led3 = Instance.new("Frame")
+local CombatFrame = Instance.new("Frame")
+local SilentAimFrame = Instance.new("Frame")
+local SilentAim = Instance.new("TextLabel")
+local SilentAimToggle = Instance.new("TextButton")
+local MissChance_Slider = Instance.new("TextButton")
+local InnerSliderB = Instance.new("TextButton")
+local InnerSliderA = Instance.new("TextButton")
+local FOVInfo = Instance.new("TextLabel")
+local MissChance = Instance.new("TextLabel")
+local HeadShotChance = Instance.new("TextLabel")
+local HeadShot_Slider = Instance.new("TextButton")
+local InnerSliderB_2 = Instance.new("TextButton")
+local InnerSliderA_2 = Instance.new("TextButton")
+local FOVInfo_2 = Instance.new("TextLabel")
+local Info = Instance.new("TextLabel")
+local AimBotFrame = Instance.new("Frame")
+local AimBot = Instance.new("TextLabel")
+local AimbotToggle = Instance.new("TextButton")
+local KeyBind = Instance.new("TextButton")
+local TeamCheck = Instance.new("TextLabel")
+local TeamCheckToggle = Instance.new("TextButton")
+local VisibilityCheck = Instance.new("TextLabel")
+local VisibilityCheckToggle = Instance.new("TextButton")
+local AimbotFOV = Instance.new("TextLabel")
+local FOV_Slider = Instance.new("TextButton")
+local InnerSliderB_3 = Instance.new("TextButton")
+local InnerSliderA_3 = Instance.new("TextButton")
+local FOVInfo_3 = Instance.new("TextLabel")
+local IgnoreFOV = Instance.new("TextLabel")
+local IgnoreFOVToggle = Instance.new("TextButton")
+local AimbotFrame = Instance.new("Frame")
+local AimBotInfo = Instance.new("TextLabel")
+local SilentAim_2 = Instance.new("TextButton")
+local Aimbot = Instance.new("TextButton")
+local SilentAimborder = Instance.new("Frame")
+local ABSFrame = Instance.new("Frame")
+local SmoothText = Instance.new("TextLabel")
+local HitPartDropDown = Instance.new("TextButton")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local DDHolder = Instance.new("Frame")
+local D2 = Instance.new("TextButton")
+local D1 = Instance.new("TextButton")
+local D3 = Instance.new("TextButton")
+local HitPart = Instance.new("TextLabel")
+local Led4 = Instance.new("Frame")
+local AimBotborder = Instance.new("Frame")
+local ABVFrame = Instance.new("Frame")
+local WFrame = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local ALed4 = Instance.new("Frame")
+local AimbotVisuals = Instance.new("TextButton")
+local AimbotSettings = Instance.new("TextButton")
+local Led5 = Instance.new("Frame")
+local ALed5 = Instance.new("Frame")
+local ABVBorder = Instance.new("Frame")
+local ABSBorder = Instance.new("Frame")
+local BlatantFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local MiscButton = Instance.new("TextButton")
+local CombatButton = Instance.new("TextButton")
+local VisualButton = Instance.new("TextButton")
+local SettingsButton = Instance.new("TextButton")
+local VisualBorder = Instance.new("Frame")
+local SettingsBorder = Instance.new("Frame")
+local MiscBorder = Instance.new("Frame")
+local CombatBorder = Instance.new("Frame")
+local BlatantButton = Instance.new("TextButton")
+local BlatantBorder = Instance.new("Frame")
+local VisualFrame = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local ESP = Instance.new("TextButton")
+local ESPSettings = Instance.new("TextButton")
+local Setborder = Instance.new("Frame")
+local ESPborder = Instance.new("Frame")
+local Led1 = Instance.new("Frame")
+local ALed1 = Instance.new("Frame")
+local ALed2 = Instance.new("Frame")
+local Led2 = Instance.new("Frame")
+local SETFrame = Instance.new("Frame")
+local TeamCheck_2 = Instance.new("TextLabel")
+local TeamCheckToggle_2 = Instance.new("TextButton")
+local VisibilityCheck_2 = Instance.new("TextLabel")
+local VisibilityCheckToggle_2 = Instance.new("TextButton")
+local DistanceDropDown = Instance.new("TextButton")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local DDHolder_2 = Instance.new("Frame")
+local D2_2 = Instance.new("TextButton")
+local D3_2 = Instance.new("TextButton")
+local D1_2 = Instance.new("TextButton")
+local Distance = Instance.new("TextLabel")
+local ESPWelcomeFrame = Instance.new("Frame")
+local ESPINFO = Instance.new("TextLabel")
+local ESPFrame = Instance.new("Frame")
+local BoxESP = Instance.new("TextLabel")
+local BoxToggle = Instance.new("TextButton")
+local Name = Instance.new("TextLabel")
+local NameToggle = Instance.new("TextButton")
+local DisplayDistance = Instance.new("TextLabel")
+local Distoggle = Instance.new("TextButton")
+local HealthBar = Instance.new("TextLabel")
+local HealthBarToggle = Instance.new("TextButton")
+local ShowHealth = Instance.new("TextLabel")
+local ShowHealthToggle = Instance.new("TextButton")
+local Exploits = Instance.new("Folder")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+OpenButton.Name = "OpenButton"
+OpenButton.Parent = ScreenGui
+OpenButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+OpenButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+OpenButton.Position = UDim2.new(0.879597545, 0, 0.787197411, 0)
+OpenButton.Size = UDim2.new(0, 145, 0, 25)
+OpenButton.Font = Enum.Font.Code
+OpenButton.Text = "Press to open InL"
+OpenButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenButton.TextSize = 14.000
+
+MainLoginFrame.Name = "MainLoginFrame"
+MainLoginFrame.Parent = ScreenGui
+MainLoginFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainLoginFrame.BorderColor3 = Color3.fromRGB(79, 139, 211)
+MainLoginFrame.BorderSizePixel = 2
+MainLoginFrame.Position = UDim2.new(-3, 0, 0.194999993, 0)
+MainLoginFrame.Size = UDim2.new(0, 316, 0, 352)
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = MainLoginFrame
+CloseButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+CloseButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+CloseButton.BorderSizePixel = 0
+CloseButton.Position = UDim2.new(0.920886099, 0, 0, 0)
+CloseButton.Size = UDim2.new(0, 25, 0, 25)
+CloseButton.Font = Enum.Font.Code
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextSize = 20.000
+
+LoginButton.Name = "LoginButton"
+LoginButton.Parent = MainLoginFrame
+LoginButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+LoginButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+LoginButton.Position = UDim2.new(0.183544308, 0, 0.761363626, 0)
+LoginButton.Size = UDim2.new(0, 200, 0, 50)
+LoginButton.Font = Enum.Font.Code
+LoginButton.Text = "Login"
+LoginButton.TextColor3 = Color3.fromRGB(248, 248, 248)
+LoginButton.TextSize = 34.000
+LoginButton.TextWrapped = true
+
+PasswordBox.Name = "PasswordBox"
+PasswordBox.Parent = MainLoginFrame
+PasswordBox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+PasswordBox.BorderColor3 = Color3.fromRGB(50, 50, 50)
+PasswordBox.Position = UDim2.new(0.0949367061, 0, 0.508522749, 0)
+PasswordBox.Size = UDim2.new(0, 256, 0, 51)
+PasswordBox.Font = Enum.Font.Roboto
+PasswordBox.Text = "Password"
+PasswordBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+PasswordBox.TextSize = 24.000
+
+UsernameBox.Name = "UsernameBox"
+UsernameBox.Parent = MainLoginFrame
+UsernameBox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+UsernameBox.BorderColor3 = Color3.fromRGB(50, 50, 50)
+UsernameBox.Position = UDim2.new(0.0949367061, 0, 0.298295468, 0)
+UsernameBox.Size = UDim2.new(0, 256, 0, 51)
+UsernameBox.Font = Enum.Font.Roboto
+UsernameBox.Text = "Username"
+UsernameBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+UsernameBox.TextSize = 24.000
+
+LoginTitle.Name = "LoginTitle"
+LoginTitle.Parent = MainLoginFrame
+LoginTitle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+LoginTitle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+LoginTitle.Position = UDim2.new(0.00300000003, 0, 0.00400000019, 0)
+LoginTitle.Size = UDim2.new(0, 314, 0, 64)
+LoginTitle.Font = Enum.Font.Code
+LoginTitle.Text = "Welcome to InL"
+LoginTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoginTitle.TextSize = 21.000
+
+TextLabel.Parent = LoginTitle
+TextLabel.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.183544308, 0, 0.671875, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 21)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "Enter your login details down below"
+TextLabel.TextColor3 = Color3.fromRGB(90, 90, 90)
+TextLabel.TextSize = 9.000
+
+BBFrame.Name = "BBFrame"
+BBFrame.Parent = ScreenGui
+BBFrame.Active = true
+BBFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BBFrame.BackgroundTransparency = 0.990
+BBFrame.BorderSizePixel = 0
+BBFrame.Position = UDim2.new(0.300000012, 0, -3, 0)
+BBFrame.Selectable = true
+BBFrame.Size = UDim2.new(0, 528, 0, 24)
+
+Holder.Name = "Holder"
+Holder.Parent = BBFrame
+Holder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Holder.BackgroundTransparency = 0.990
+Holder.BorderSizePixel = 0
+Holder.Position = UDim2.new(0, -2, 0, -1)
+Holder.Size = UDim2.new(0, 528, 0, 578)
+
+Outline.Name = "Outline"
+Outline.Parent = Holder
+Outline.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Outline.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Outline.Position = UDim2.new(0, -2, 0, -1)
+Outline.Size = UDim2.new(0, 528, 0, 578)
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Outline
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.Position = UDim2.new(0, 1, 0, 1)
+MainFrame.Size = UDim2.new(0, 526, 0, 576)
+
+SecondaryFrame.Name = "SecondaryFrame"
+SecondaryFrame.Parent = MainFrame
+SecondaryFrame.Active = true
+SecondaryFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+SecondaryFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+SecondaryFrame.Position = UDim2.new(0, 10, 0, 25)
+SecondaryFrame.Size = UDim2.new(0, 506, 0, 541)
+
+MiscFrame.Name = "MiscFrame"
+MiscFrame.Parent = SecondaryFrame
+MiscFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MiscFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+MiscFrame.Position = UDim2.new(0, 10, 0, 33)
+MiscFrame.Size = UDim2.new(0, 486, 0, 498)
+MiscFrame.Visible = false
+
+WelcomeFrame.Name = "WelcomeFrame"
+WelcomeFrame.Parent = SecondaryFrame
+WelcomeFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+WelcomeFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+WelcomeFrame.Position = UDim2.new(0, 10, 0, 33)
+WelcomeFrame.Size = UDim2.new(0, 486, 0, 498)
+
+ImageLabel.Parent = WelcomeFrame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0, 30, 0, 30)
+ImageLabel.Size = UDim2.new(0, 426, 0, 369)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=444167615"
+
+WelcomeLabel.Name = "WelcomeLabel"
+WelcomeLabel.Parent = WelcomeFrame
+WelcomeLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+WelcomeLabel.BackgroundTransparency = 1.000
+WelcomeLabel.BorderColor3 = Color3.fromRGB(50, 50, 50)
+WelcomeLabel.BorderSizePixel = 0
+WelcomeLabel.Position = UDim2.new(0, 126, 0, 414)
+WelcomeLabel.Size = UDim2.new(0, 233, 0, 52)
+WelcomeLabel.Font = Enum.Font.Kalam
+WelcomeLabel.Text = "Welcome to InL"
+WelcomeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeLabel.TextScaled = true
+WelcomeLabel.TextSize = 52.000
+WelcomeLabel.TextWrapped = true
+
+SettingsFrame.Name = "SettingsFrame"
+SettingsFrame.Parent = SecondaryFrame
+SettingsFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SettingsFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+SettingsFrame.Position = UDim2.new(0, 10, 0, 33)
+SettingsFrame.Size = UDim2.new(0, 486, 0, 498)
+SettingsFrame.Visible = false
+
+UISettings.Name = "UISettings"
+UISettings.Parent = SettingsFrame
+UISettings.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+UISettings.BorderColor3 = Color3.fromRGB(50, 50, 50)
+UISettings.Position = UDim2.new(0, 10, 0, 10)
+UISettings.Size = UDim2.new(0, 228, 0, 247)
+
+Theme.Name = "Theme"
+Theme.Parent = UISettings
+Theme.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Theme.BackgroundTransparency = 1.000
+Theme.BorderSizePixel = 0
+Theme.Position = UDim2.new(0, 6, 0, 6)
+Theme.Size = UDim2.new(0, 200, 0, 16)
+Theme.Font = Enum.Font.Code
+Theme.Text = "Theme"
+Theme.TextColor3 = Color3.fromRGB(255, 255, 255)
+Theme.TextSize = 14.000
+Theme.TextStrokeTransparency = 0.000
+Theme.TextXAlignment = Enum.TextXAlignment.Left
+
+BBC.Name = "BBC"
+BBC.Parent = UISettings
+BBC.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+BBC.BackgroundTransparency = 1.000
+BBC.BorderSizePixel = 0
+BBC.Position = UDim2.new(0, 6, 0, 22)
+BBC.Size = UDim2.new(0, 219, 0, 16)
+BBC.Font = Enum.Font.Code
+BBC.Text = "BackGround Color"
+BBC.TextColor3 = Color3.fromRGB(255, 255, 255)
+BBC.TextSize = 14.000
+BBC.TextStrokeTransparency = 0.000
+BBC.TextXAlignment = Enum.TextXAlignment.Left
+
+BackGroundColor.Name = "BackGroundColor"
+BackGroundColor.Parent = BBC
+BackGroundColor.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+BackGroundColor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BackGroundColor.Position = UDim2.new(0.834999979, 0, 0.0480000004, 0)
+BackGroundColor.Size = UDim2.new(0, 28, 0, 13)
+BackGroundColor.Font = Enum.Font.SourceSans
+BackGroundColor.Text = ""
+BackGroundColor.TextColor3 = Color3.fromRGB(0, 0, 0)
+BackGroundColor.TextSize = 14.000
+
+MainColor.Name = "MainColor"
+MainColor.Parent = UISettings
+MainColor.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+MainColor.BackgroundTransparency = 1.000
+MainColor.BorderSizePixel = 0
+MainColor.Position = UDim2.new(0, 6, 0, 46)
+MainColor.Size = UDim2.new(0, 219, 0, 16)
+MainColor.Font = Enum.Font.Code
+MainColor.Text = "Main Color"
+MainColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainColor.TextSize = 14.000
+MainColor.TextStrokeTransparency = 0.000
+MainColor.TextXAlignment = Enum.TextXAlignment.Left
+
+MainColor_2.Name = "MainColor"
+MainColor_2.Parent = MainColor
+MainColor_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+MainColor_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainColor_2.Position = UDim2.new(0.834999979, 0, 0.0480000004, 0)
+MainColor_2.Size = UDim2.new(0, 28, 0, 13)
+MainColor_2.Font = Enum.Font.SourceSans
+MainColor_2.Text = ""
+MainColor_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+MainColor_2.TextSize = 14.000
+
+OutlineColor.Name = "OutlineColor"
+OutlineColor.Parent = UISettings
+OutlineColor.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+OutlineColor.BackgroundTransparency = 1.000
+OutlineColor.BorderSizePixel = 0
+OutlineColor.Position = UDim2.new(0, 6, 0, 70)
+OutlineColor.Size = UDim2.new(0, 219, 0, 16)
+OutlineColor.Font = Enum.Font.Code
+OutlineColor.Text = "OutLine Color"
+OutlineColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+OutlineColor.TextSize = 14.000
+OutlineColor.TextStrokeTransparency = 0.000
+OutlineColor.TextXAlignment = Enum.TextXAlignment.Left
+
+OutlineColor_2.Name = "OutlineColor"
+OutlineColor_2.Parent = OutlineColor
+OutlineColor_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+OutlineColor_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OutlineColor_2.Position = UDim2.new(0.834999979, 0, 0.0480000004, 0)
+OutlineColor_2.Size = UDim2.new(0, 28, 0, 13)
+OutlineColor_2.Font = Enum.Font.SourceSans
+OutlineColor_2.Text = ""
+OutlineColor_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+OutlineColor_2.TextSize = 14.000
+
+AccentColor.Name = "AccentColor"
+AccentColor.Parent = UISettings
+AccentColor.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AccentColor.BackgroundTransparency = 1.000
+AccentColor.BorderSizePixel = 0
+AccentColor.Position = UDim2.new(0, 6, 0, 94)
+AccentColor.Size = UDim2.new(0, 219, 0, 16)
+AccentColor.Font = Enum.Font.Code
+AccentColor.Text = "Accent Color"
+AccentColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+AccentColor.TextSize = 14.000
+AccentColor.TextStrokeTransparency = 0.000
+AccentColor.TextXAlignment = Enum.TextXAlignment.Left
+
+AccentColor_2.Name = "AccentColor"
+AccentColor_2.Parent = AccentColor
+AccentColor_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+AccentColor_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AccentColor_2.Position = UDim2.new(0.834999979, 0, 0.0480000004, 0)
+AccentColor_2.Size = UDim2.new(0, 28, 0, 13)
+AccentColor_2.Font = Enum.Font.SourceSans
+AccentColor_2.Text = ""
+AccentColor_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+AccentColor_2.TextSize = 14.000
+
+RainbowAccentColor.Name = "Rainbow Accent Color"
+RainbowAccentColor.Parent = UISettings
+RainbowAccentColor.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+RainbowAccentColor.BackgroundTransparency = 1.000
+RainbowAccentColor.BorderSizePixel = 0
+RainbowAccentColor.Position = UDim2.new(0, 7, 0, 114)
+RainbowAccentColor.Size = UDim2.new(0, 182, 0, 16)
+RainbowAccentColor.Font = Enum.Font.Code
+RainbowAccentColor.Text = "Rainbow Accent Color"
+RainbowAccentColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+RainbowAccentColor.TextSize = 14.000
+RainbowAccentColor.TextStrokeTransparency = 0.000
+
+ColorChangeon.Name = "ColorChange-on"
+ColorChangeon.Parent = RainbowAccentColor
+ColorChangeon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorChangeon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ColorChangeon.Position = UDim2.new(-0.00400000019, 0, 0.0820000023, 0)
+ColorChangeon.Size = UDim2.new(0, 13, 0, 13)
+ColorChangeon.Font = Enum.Font.SourceSans
+ColorChangeon.Text = ""
+ColorChangeon.TextColor3 = Color3.fromRGB(0, 0, 0)
+ColorChangeon.TextSize = 14.000
+
+ColorChangeoff.Name = "ColorChange-off"
+ColorChangeoff.Parent = RainbowAccentColor
+ColorChangeoff.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorChangeoff.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ColorChangeoff.Position = UDim2.new(-0.00400000019, 0, 0.0820000023, 0)
+ColorChangeoff.Size = UDim2.new(0, 13, 0, 13)
+ColorChangeoff.Visible = false
+ColorChangeoff.Font = Enum.Font.SourceSans
+ColorChangeoff.Text = ""
+ColorChangeoff.TextColor3 = Color3.fromRGB(0, 0, 0)
+ColorChangeoff.TextSize = 14.000
+
+ALED3.Name = "ALED-3"
+ALED3.Parent = UISettings
+ALED3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ALED3.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ALED3.Size = UDim2.new(0, 228, 0, 2)
+ALED3.Visible = false
+
+Led3.Name = "Led-3"
+Led3.Parent = UISettings
+Led3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Led3.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Led3.Size = UDim2.new(0, 228, 0, 2)
+
+CombatFrame.Name = "CombatFrame"
+CombatFrame.Parent = SecondaryFrame
+CombatFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CombatFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+CombatFrame.Position = UDim2.new(0, 10, 0, 33)
+CombatFrame.Size = UDim2.new(0, 486, 0, 498)
+CombatFrame.Visible = false
+
+SilentAimFrame.Name = "SilentAimFrame"
+SilentAimFrame.Parent = CombatFrame
+SilentAimFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+SilentAimFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+SilentAimFrame.Position = UDim2.new(0, 10, 0, 10)
+SilentAimFrame.Size = UDim2.new(0, 228, 0, 247)
+SilentAimFrame.Visible = false
+
+SilentAim.Name = "Silent Aim"
+SilentAim.Parent = SilentAimFrame
+SilentAim.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+SilentAim.BackgroundTransparency = 1.000
+SilentAim.BorderColor3 = Color3.fromRGB(50, 50, 50)
+SilentAim.BorderSizePixel = 0
+SilentAim.Position = UDim2.new(0, 6, 0, 24)
+SilentAim.Size = UDim2.new(0, 87, 0, 16)
+SilentAim.Font = Enum.Font.Code
+SilentAim.Text = "   Silent Aim"
+SilentAim.TextColor3 = Color3.fromRGB(255, 255, 255)
+SilentAim.TextSize = 14.000
+SilentAim.TextStrokeTransparency = 0.000
+SilentAim.TextXAlignment = Enum.TextXAlignment.Left
+
+SilentAimToggle.Name = "SilentAimToggle"
+SilentAimToggle.Parent = SilentAim
+SilentAimToggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+SilentAimToggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+SilentAimToggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+SilentAimToggle.Size = UDim2.new(0, 12, 0, 12)
+SilentAimToggle.Font = Enum.Font.SourceSans
+SilentAimToggle.Text = ""
+SilentAimToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+SilentAimToggle.TextSize = 14.000
+
+MissChance_Slider.Name = "MissChance_Slider"
+MissChance_Slider.Parent = SilentAimFrame
+MissChance_Slider.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+MissChance_Slider.BorderColor3 = Color3.fromRGB(50, 50, 50)
+MissChance_Slider.Position = UDim2.new(0, 6, 0, 59)
+MissChance_Slider.Size = UDim2.new(0, 216, 0, 12)
+MissChance_Slider.Font = Enum.Font.SourceSans
+MissChance_Slider.Text = ""
+MissChance_Slider.TextColor3 = Color3.fromRGB(0, 0, 0)
+MissChance_Slider.TextSize = 14.000
+MissChance_Slider.TextStrokeTransparency = 0.000
+
+InnerSliderB.Name = "InnerSliderB"
+InnerSliderB.Parent = MissChance_Slider
+InnerSliderB.BackgroundColor3 = Color3.fromRGB(49, 245, 255)
+InnerSliderB.BorderSizePixel = 0
+InnerSliderB.Size = UDim2.new(0, 1, 0, 12)
+InnerSliderB.Font = Enum.Font.SourceSans
+InnerSliderB.Text = ""
+InnerSliderB.TextColor3 = Color3.fromRGB(0, 0, 0)
+InnerSliderB.TextSize = 14.000
+
+InnerSliderA.Name = "InnerSliderA"
+InnerSliderA.Parent = MissChance_Slider
+InnerSliderA.BackgroundColor3 = Color3.fromRGB(201, 218, 255)
+InnerSliderA.BorderSizePixel = 0
+InnerSliderA.Size = UDim2.new(0, 1, 0, 12)
+InnerSliderA.Visible = false
+InnerSliderA.Font = Enum.Font.SourceSans
+InnerSliderA.Text = ""
+InnerSliderA.TextColor3 = Color3.fromRGB(0, 0, 0)
+InnerSliderA.TextSize = 14.000
+
+FOVInfo.Name = "FOVInfo"
+FOVInfo.Parent = MissChance_Slider
+FOVInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FOVInfo.BackgroundTransparency = 1.000
+FOVInfo.Position = UDim2.new(0.00462962966, 72, -0.0500000007, 0)
+FOVInfo.Size = UDim2.new(0, 70, 0, 12)
+FOVInfo.Font = Enum.Font.RobotoMono
+FOVInfo.LineHeight = 0.950
+FOVInfo.Text = "0%/100%"
+FOVInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
+FOVInfo.TextSize = 13.000
+FOVInfo.TextStrokeTransparency = 0.000
+
+MissChance.Name = "MissChance"
+MissChance.Parent = SilentAimFrame
+MissChance.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+MissChance.BackgroundTransparency = 1.000
+MissChance.BorderColor3 = Color3.fromRGB(50, 50, 50)
+MissChance.BorderSizePixel = 0
+MissChance.Position = UDim2.new(0, 6, 0, 43)
+MissChance.Size = UDim2.new(0, 87, 0, 16)
+MissChance.Font = Enum.Font.Code
+MissChance.Text = "Miss Chance"
+MissChance.TextColor3 = Color3.fromRGB(255, 255, 255)
+MissChance.TextSize = 14.000
+MissChance.TextStrokeTransparency = 0.000
+MissChance.TextXAlignment = Enum.TextXAlignment.Left
+MissChance.TextYAlignment = Enum.TextYAlignment.Top
+
+HeadShotChance.Name = "HeadShotChance"
+HeadShotChance.Parent = SilentAimFrame
+HeadShotChance.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+HeadShotChance.BackgroundTransparency = 1.000
+HeadShotChance.BorderColor3 = Color3.fromRGB(50, 50, 50)
+HeadShotChance.BorderSizePixel = 0
+HeadShotChance.Position = UDim2.new(0, 6, 0, 78)
+HeadShotChance.Size = UDim2.new(0, 87, 0, 16)
+HeadShotChance.Font = Enum.Font.Code
+HeadShotChance.Text = "Silent Aim HeadShot"
+HeadShotChance.TextColor3 = Color3.fromRGB(255, 255, 255)
+HeadShotChance.TextSize = 14.000
+HeadShotChance.TextStrokeTransparency = 0.000
+HeadShotChance.TextXAlignment = Enum.TextXAlignment.Left
+HeadShotChance.TextYAlignment = Enum.TextYAlignment.Top
+
+HeadShot_Slider.Name = "HeadShot_Slider"
+HeadShot_Slider.Parent = SilentAimFrame
+HeadShot_Slider.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+HeadShot_Slider.BorderColor3 = Color3.fromRGB(50, 50, 50)
+HeadShot_Slider.Position = UDim2.new(0, 6, 0, 94)
+HeadShot_Slider.Size = UDim2.new(0, 216, 0, 12)
+HeadShot_Slider.Font = Enum.Font.SourceSans
+HeadShot_Slider.Text = ""
+HeadShot_Slider.TextColor3 = Color3.fromRGB(0, 0, 0)
+HeadShot_Slider.TextSize = 14.000
+HeadShot_Slider.TextStrokeTransparency = 0.000
+
+InnerSliderB_2.Name = "InnerSliderB"
+InnerSliderB_2.Parent = HeadShot_Slider
+InnerSliderB_2.BackgroundColor3 = Color3.fromRGB(49, 245, 255)
+InnerSliderB_2.BorderSizePixel = 0
+InnerSliderB_2.Size = UDim2.new(0, 1, 0, 12)
+InnerSliderB_2.Font = Enum.Font.SourceSans
+InnerSliderB_2.Text = ""
+InnerSliderB_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+InnerSliderB_2.TextSize = 14.000
+
+InnerSliderA_2.Name = "InnerSliderA"
+InnerSliderA_2.Parent = HeadShot_Slider
+InnerSliderA_2.BackgroundColor3 = Color3.fromRGB(201, 218, 255)
+InnerSliderA_2.BorderSizePixel = 0
+InnerSliderA_2.Size = UDim2.new(0, 1, 0, 12)
+InnerSliderA_2.Visible = false
+InnerSliderA_2.Font = Enum.Font.SourceSans
+InnerSliderA_2.Text = ""
+InnerSliderA_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+InnerSliderA_2.TextSize = 14.000
+
+FOVInfo_2.Name = "FOVInfo"
+FOVInfo_2.Parent = HeadShot_Slider
+FOVInfo_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FOVInfo_2.BackgroundTransparency = 1.000
+FOVInfo_2.Position = UDim2.new(0.00462962966, 72, -0.0500000007, 0)
+FOVInfo_2.Size = UDim2.new(0, 70, 0, 12)
+FOVInfo_2.Font = Enum.Font.RobotoMono
+FOVInfo_2.LineHeight = 0.950
+FOVInfo_2.Text = "0%/100%"
+FOVInfo_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+FOVInfo_2.TextSize = 13.000
+FOVInfo_2.TextStrokeTransparency = 0.000
+
+Info.Name = "Info"
+Info.Parent = SilentAimFrame
+Info.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Info.BackgroundTransparency = 1.000
+Info.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Info.BorderSizePixel = 0
+Info.Position = UDim2.new(0, 1, 0, 230)
+Info.Size = UDim2.new(0, 227, 0, 16)
+Info.Font = Enum.Font.Code
+Info.Text = "(Silent Aim uses Aimbot Toggles.)"
+Info.TextColor3 = Color3.fromRGB(255, 255, 255)
+Info.TextSize = 12.000
+Info.TextStrokeTransparency = 0.000
+Info.TextXAlignment = Enum.TextXAlignment.Left
+Info.TextYAlignment = Enum.TextYAlignment.Top
+
+AimBotFrame.Name = "AimBotFrame"
+AimBotFrame.Parent = CombatFrame
+AimBotFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AimBotFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+AimBotFrame.Position = UDim2.new(0, 10, 0, 10)
+AimBotFrame.Size = UDim2.new(0, 228, 0, 247)
+AimBotFrame.Visible = false
+
+AimBot.Name = "AimBot"
+AimBot.Parent = AimBotFrame
+AimBot.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AimBot.BackgroundTransparency = 1.000
+AimBot.BorderColor3 = Color3.fromRGB(50, 50, 50)
+AimBot.BorderSizePixel = 0
+AimBot.Position = UDim2.new(0, 6, 0, 24)
+AimBot.Size = UDim2.new(0, 87, 0, 16)
+AimBot.Font = Enum.Font.Code
+AimBot.Text = "   Aimbot"
+AimBot.TextColor3 = Color3.fromRGB(255, 255, 255)
+AimBot.TextSize = 14.000
+AimBot.TextStrokeTransparency = 0.000
+AimBot.TextXAlignment = Enum.TextXAlignment.Left
+
+AimbotToggle.Name = "AimbotToggle"
+AimbotToggle.Parent = AimBot
+AimbotToggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+AimbotToggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+AimbotToggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+AimbotToggle.Size = UDim2.new(0, 12, 0, 12)
+AimbotToggle.Font = Enum.Font.SourceSans
+AimbotToggle.Text = ""
+AimbotToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+AimbotToggle.TextSize = 14.000
+
+KeyBind.Name = "KeyBind"
+KeyBind.Parent = AimBot
+KeyBind.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+KeyBind.BorderColor3 = Color3.fromRGB(50, 50, 50)
+KeyBind.Position = UDim2.new(0, 192, 0.0930000022, 0)
+KeyBind.Size = UDim2.new(0, 24, 0, 12)
+KeyBind.Font = Enum.Font.Roboto
+KeyBind.Text = "RMB"
+KeyBind.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBind.TextSize = 11.000
+KeyBind.TextStrokeTransparency = 0.000
+KeyBind.TextWrapped = true
+
+TeamCheck.Name = "TeamCheck"
+TeamCheck.Parent = AimBotFrame
+TeamCheck.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+TeamCheck.BackgroundTransparency = 1.000
+TeamCheck.BorderColor3 = Color3.fromRGB(50, 50, 50)
+TeamCheck.BorderSizePixel = 0
+TeamCheck.Position = UDim2.new(0, 6, 0, 43)
+TeamCheck.Size = UDim2.new(0, 87, 0, 16)
+TeamCheck.Font = Enum.Font.Code
+TeamCheck.Text = "   Team Check"
+TeamCheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeamCheck.TextSize = 14.000
+TeamCheck.TextStrokeTransparency = 0.000
+TeamCheck.TextXAlignment = Enum.TextXAlignment.Left
+
+TeamCheckToggle.Name = "TeamCheckToggle"
+TeamCheckToggle.Parent = TeamCheck
+TeamCheckToggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+TeamCheckToggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+TeamCheckToggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+TeamCheckToggle.Size = UDim2.new(0, 12, 0, 12)
+TeamCheckToggle.Font = Enum.Font.SourceSans
+TeamCheckToggle.Text = ""
+TeamCheckToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+TeamCheckToggle.TextSize = 14.000
+
+VisibilityCheck.Name = "VisibilityCheck"
+VisibilityCheck.Parent = AimBotFrame
+VisibilityCheck.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+VisibilityCheck.BackgroundTransparency = 1.000
+VisibilityCheck.BorderColor3 = Color3.fromRGB(50, 50, 50)
+VisibilityCheck.BorderSizePixel = 0
+VisibilityCheck.Position = UDim2.new(0, 6, 0, 62)
+VisibilityCheck.Size = UDim2.new(0, 87, 0, 16)
+VisibilityCheck.Font = Enum.Font.Code
+VisibilityCheck.Text = "   Visibility Check"
+VisibilityCheck.TextColor3 = Color3.fromRGB(255, 255, 255)
+VisibilityCheck.TextSize = 14.000
+VisibilityCheck.TextStrokeTransparency = 0.000
+VisibilityCheck.TextXAlignment = Enum.TextXAlignment.Left
+
+VisibilityCheckToggle.Name = "VisibilityCheckToggle"
+VisibilityCheckToggle.Parent = VisibilityCheck
+VisibilityCheckToggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+VisibilityCheckToggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+VisibilityCheckToggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+VisibilityCheckToggle.Size = UDim2.new(0, 12, 0, 12)
+VisibilityCheckToggle.Font = Enum.Font.SourceSans
+VisibilityCheckToggle.Text = ""
+VisibilityCheckToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+VisibilityCheckToggle.TextSize = 14.000
+
+AimbotFOV.Name = "Aimbot FOV"
+AimbotFOV.Parent = AimBotFrame
+AimbotFOV.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AimbotFOV.BackgroundTransparency = 1.000
+AimbotFOV.BorderColor3 = Color3.fromRGB(50, 50, 50)
+AimbotFOV.BorderSizePixel = 0
+AimbotFOV.Position = UDim2.new(0, 6, 0, 100)
+AimbotFOV.Size = UDim2.new(0, 87, 0, 16)
+AimbotFOV.Font = Enum.Font.Code
+AimbotFOV.Text = "Aimbot FOV"
+AimbotFOV.TextColor3 = Color3.fromRGB(255, 255, 255)
+AimbotFOV.TextSize = 14.000
+AimbotFOV.TextStrokeTransparency = 0.000
+AimbotFOV.TextXAlignment = Enum.TextXAlignment.Left
+AimbotFOV.TextYAlignment = Enum.TextYAlignment.Top
+
+FOV_Slider.Name = "FOV_Slider"
+FOV_Slider.Parent = AimBotFrame
+FOV_Slider.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+FOV_Slider.BorderColor3 = Color3.fromRGB(50, 50, 50)
+FOV_Slider.Position = UDim2.new(0, 6, 0, 116)
+FOV_Slider.Size = UDim2.new(0, 216, 0, 12)
+FOV_Slider.Font = Enum.Font.SourceSans
+FOV_Slider.Text = ""
+FOV_Slider.TextColor3 = Color3.fromRGB(0, 0, 0)
+FOV_Slider.TextSize = 14.000
+FOV_Slider.TextStrokeTransparency = 0.000
+
+InnerSliderB_3.Name = "InnerSliderB"
+InnerSliderB_3.Parent = FOV_Slider
+InnerSliderB_3.BackgroundColor3 = Color3.fromRGB(49, 245, 255)
+InnerSliderB_3.BorderSizePixel = 0
+InnerSliderB_3.Size = UDim2.new(0, 1, 0, 12)
+InnerSliderB_3.Font = Enum.Font.SourceSans
+InnerSliderB_3.Text = ""
+InnerSliderB_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+InnerSliderB_3.TextSize = 14.000
+
+InnerSliderA_3.Name = "InnerSliderA"
+InnerSliderA_3.Parent = FOV_Slider
+InnerSliderA_3.BackgroundColor3 = Color3.fromRGB(201, 218, 255)
+InnerSliderA_3.BorderSizePixel = 0
+InnerSliderA_3.Size = UDim2.new(0, 1, 0, 12)
+InnerSliderA_3.Visible = false
+InnerSliderA_3.Font = Enum.Font.SourceSans
+InnerSliderA_3.Text = ""
+InnerSliderA_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+InnerSliderA_3.TextSize = 14.000
+
+FOVInfo_3.Name = "FOVInfo"
+FOVInfo_3.Parent = FOV_Slider
+FOVInfo_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FOVInfo_3.BackgroundTransparency = 1.000
+FOVInfo_3.Position = UDim2.new(0.00462962966, 72, -0.0500000007, 0)
+FOVInfo_3.Size = UDim2.new(0, 70, 0, 12)
+FOVInfo_3.Font = Enum.Font.RobotoMono
+FOVInfo_3.LineHeight = 0.950
+FOVInfo_3.Text = "0/10"
+FOVInfo_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+FOVInfo_3.TextSize = 13.000
+FOVInfo_3.TextStrokeTransparency = 0.000
+
+IgnoreFOV.Name = "IgnoreFOV"
+IgnoreFOV.Parent = AimBotFrame
+IgnoreFOV.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+IgnoreFOV.BackgroundTransparency = 1.000
+IgnoreFOV.BorderColor3 = Color3.fromRGB(50, 50, 50)
+IgnoreFOV.BorderSizePixel = 0
+IgnoreFOV.Position = UDim2.new(0, 6, 0, 81)
+IgnoreFOV.Size = UDim2.new(0, 87, 0, 16)
+IgnoreFOV.Font = Enum.Font.Code
+IgnoreFOV.Text = "   Ignore FOV"
+IgnoreFOV.TextColor3 = Color3.fromRGB(255, 255, 255)
+IgnoreFOV.TextSize = 14.000
+IgnoreFOV.TextStrokeTransparency = 0.000
+IgnoreFOV.TextXAlignment = Enum.TextXAlignment.Left
+
+IgnoreFOVToggle.Name = "IgnoreFOVToggle"
+IgnoreFOVToggle.Parent = IgnoreFOV
+IgnoreFOVToggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+IgnoreFOVToggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+IgnoreFOVToggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+IgnoreFOVToggle.Size = UDim2.new(0, 12, 0, 12)
+IgnoreFOVToggle.Font = Enum.Font.SourceSans
+IgnoreFOVToggle.Text = ""
+IgnoreFOVToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+IgnoreFOVToggle.TextSize = 14.000
+
+AimbotFrame.Name = "AimbotFrame"
+AimbotFrame.Parent = CombatFrame
+AimbotFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AimbotFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+AimbotFrame.Position = UDim2.new(0, 10, 0, 10)
+AimbotFrame.Size = UDim2.new(0, 228, 0, 247)
+
+AimBotInfo.Name = "AimBotInfo"
+AimBotInfo.Parent = AimbotFrame
+AimBotInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AimBotInfo.BackgroundTransparency = 1.000
+AimBotInfo.BorderSizePixel = 0
+AimBotInfo.Position = UDim2.new(0.100000001, 0, 0.160999998, 0)
+AimBotInfo.Size = UDim2.new(0, 180, 0, 180)
+AimBotInfo.Font = Enum.Font.SourceSans
+AimBotInfo.Text = "Aimbots are game bots that automatically lock a player's cursor to their opponents in order to improve their target accuracy and speed. While Silent Aim, an Evolved version of Aimbot, uses a bullet magnetism-like effect that hits enemy players regardless of where the you aim."
+AimBotInfo.TextColor3 = Color3.fromRGB(255, 255, 255)
+AimBotInfo.TextSize = 18.000
+AimBotInfo.TextWrapped = true
+
+SilentAim_2.Name = "Silent Aim"
+SilentAim_2.Parent = CombatFrame
+SilentAim_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SilentAim_2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+SilentAim_2.Position = UDim2.new(0, 123, 0, 12)
+SilentAim_2.Size = UDim2.new(0, 115, 0, 16)
+SilentAim_2.Font = Enum.Font.Code
+SilentAim_2.Text = "Silent Aim"
+SilentAim_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SilentAim_2.TextSize = 14.000
+SilentAim_2.TextStrokeTransparency = 0.000
+
+Aimbot.Name = "Aimbot"
+Aimbot.Parent = CombatFrame
+Aimbot.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Aimbot.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Aimbot.Position = UDim2.new(0, 10, 0, 12)
+Aimbot.Size = UDim2.new(0, 113, 0, 16)
+Aimbot.Font = Enum.Font.Code
+Aimbot.Text = "Aimbot"
+Aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+Aimbot.TextSize = 14.000
+Aimbot.TextStrokeTransparency = 0.000
+
+SilentAimborder.Name = "SilentAimborder"
+SilentAimborder.Parent = CombatFrame
+SilentAimborder.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+SilentAimborder.BorderColor3 = Color3.fromRGB(27, 42, 53)
+SilentAimborder.BorderSizePixel = 0
+SilentAimborder.Position = UDim2.new(0, 124, 0, 27)
+SilentAimborder.Size = UDim2.new(0, 114, 0, 4)
+SilentAimborder.Visible = false
+
+ABSFrame.Name = "ABSFrame"
+ABSFrame.Parent = CombatFrame
+ABSFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ABSFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ABSFrame.Position = UDim2.new(0, 248, 0, 10)
+ABSFrame.Size = UDim2.new(0, 228, 0, 247)
+ABSFrame.Visible = false
+
+SmoothText.Name = "SmoothText"
+SmoothText.Parent = ABSFrame
+SmoothText.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+SmoothText.BackgroundTransparency = 1.000
+SmoothText.BorderColor3 = Color3.fromRGB(50, 50, 50)
+SmoothText.BorderSizePixel = 0
+SmoothText.Position = UDim2.new(0, 6, 0, 24)
+SmoothText.Size = UDim2.new(0, 87, 0, 16)
+SmoothText.Font = Enum.Font.Code
+SmoothText.Text = "Smoothing"
+SmoothText.TextColor3 = Color3.fromRGB(255, 255, 255)
+SmoothText.TextSize = 14.000
+SmoothText.TextStrokeTransparency = 0.000
+SmoothText.TextXAlignment = Enum.TextXAlignment.Left
+SmoothText.TextYAlignment = Enum.TextYAlignment.Top
+
+HitPartDropDown.Name = "HitPartDropDown"
+HitPartDropDown.Parent = ABSFrame
+HitPartDropDown.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+HitPartDropDown.BorderColor3 = Color3.fromRGB(50, 50, 50)
+HitPartDropDown.Position = UDim2.new(0, 6, 0, 74)
+HitPartDropDown.Size = UDim2.new(0, 216, 0, 18)
+HitPartDropDown.Font = Enum.Font.Code
+HitPartDropDown.Text = " Head"
+HitPartDropDown.TextColor3 = Color3.fromRGB(255, 255, 255)
+HitPartDropDown.TextSize = 14.000
+HitPartDropDown.TextStrokeTransparency = 0.000
+HitPartDropDown.TextXAlignment = Enum.TextXAlignment.Left
+
+ImageLabel_2.Parent = HitPartDropDown
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ImageLabel_2.Position = UDim2.new(0, 199, 0, 1)
+ImageLabel_2.Size = UDim2.new(0, 15, 0, 15)
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=9482956116"
+
+DDHolder.Name = "DDHolder"
+DDHolder.Parent = HitPartDropDown
+DDHolder.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+DDHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DDHolder.Position = UDim2.new(0, 0, 0, 20)
+DDHolder.Size = UDim2.new(0, 216, 0, 54)
+DDHolder.Visible = false
+
+D2.Name = "D2"
+D2.Parent = DDHolder
+D2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+D2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+D2.Position = UDim2.new(0, 0, 0, 19)
+D2.Size = UDim2.new(0, 216, 0, 18)
+D2.Selected = true
+D2.Font = Enum.Font.Code
+D2.Text = " HumanoidRootPart"
+D2.TextColor3 = Color3.fromRGB(255, 255, 255)
+D2.TextSize = 14.000
+D2.TextStrokeTransparency = 0.000
+D2.TextXAlignment = Enum.TextXAlignment.Left
+
+D1.Name = "D1"
+D1.Parent = DDHolder
+D1.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+D1.BorderColor3 = Color3.fromRGB(50, 50, 50)
+D1.Position = UDim2.new(0, 0, 0, -1)
+D1.Size = UDim2.new(0, 216, 0, 19)
+D1.Selected = true
+D1.Font = Enum.Font.Code
+D1.Text = " Head"
+D1.TextColor3 = Color3.fromRGB(255, 255, 255)
+D1.TextSize = 14.000
+D1.TextStrokeTransparency = 0.000
+D1.TextXAlignment = Enum.TextXAlignment.Left
+
+D3.Name = "D3"
+D3.Parent = DDHolder
+D3.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+D3.BorderColor3 = Color3.fromRGB(50, 50, 50)
+D3.Position = UDim2.new(0, 0, 0, 37)
+D3.Size = UDim2.new(0, 216, 0, 18)
+D3.Selected = true
+D3.Font = Enum.Font.Code
+D3.Text = " Random"
+D3.TextColor3 = Color3.fromRGB(255, 255, 255)
+D3.TextSize = 14.000
+D3.TextStrokeTransparency = 0.000
+D3.TextXAlignment = Enum.TextXAlignment.Left
+
+HitPart.Name = "HitPart"
+HitPart.Parent = ABSFrame
+HitPart.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+HitPart.BackgroundTransparency = 1.000
+HitPart.BorderColor3 = Color3.fromRGB(50, 50, 50)
+HitPart.BorderSizePixel = 0
+HitPart.Position = UDim2.new(0, 6, 0, 57)
+HitPart.Size = UDim2.new(0, 87, 0, 16)
+HitPart.Font = Enum.Font.Code
+HitPart.Text = "HitPart:"
+HitPart.TextColor3 = Color3.fromRGB(255, 255, 255)
+HitPart.TextSize = 14.000
+HitPart.TextStrokeTransparency = 0.000
+HitPart.TextXAlignment = Enum.TextXAlignment.Left
+HitPart.TextYAlignment = Enum.TextYAlignment.Top
+
+Led4.Name = "Led-4"
+Led4.Parent = CombatFrame
+Led4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Led4.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Led4.Position = UDim2.new(0, 10, 0, 10)
+Led4.Size = UDim2.new(0, 228, 0, 2)
+
+AimBotborder.Name = "AimBotborder"
+AimBotborder.Parent = CombatFrame
+AimBotborder.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AimBotborder.BorderColor3 = Color3.fromRGB(27, 42, 53)
+AimBotborder.BorderSizePixel = 0
+AimBotborder.Position = UDim2.new(0, 10, 0, 27)
+AimBotborder.Size = UDim2.new(0, 113, 0, 4)
+AimBotborder.Visible = false
+
+ABVFrame.Name = "ABVFrame"
+ABVFrame.Parent = CombatFrame
+ABVFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ABVFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ABVFrame.Position = UDim2.new(0, 248, 0, 10)
+ABVFrame.Size = UDim2.new(0, 228, 0, 247)
+ABVFrame.Visible = false
+
+WFrame.Name = "WFrame"
+WFrame.Parent = CombatFrame
+WFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+WFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+WFrame.Position = UDim2.new(0, 248, 0, 10)
+WFrame.Size = UDim2.new(0, 228, 0, 247)
+
+TextLabel_2.Parent = WFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0495495498, 0, 0.14818348, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 183)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Aimbot Settings and Visual Configuration Tabs"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 18.000
+TextLabel_2.TextWrapped = true
+
+ALed4.Name = "ALed-4"
+ALed4.Parent = CombatFrame
+ALed4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ALed4.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ALed4.Position = UDim2.new(0, 10, 0, 10)
+ALed4.Size = UDim2.new(0, 228, 0, 2)
+ALed4.Visible = false
+
+AimbotVisuals.Name = "AimbotVisuals"
+AimbotVisuals.Parent = CombatFrame
+AimbotVisuals.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+AimbotVisuals.BorderColor3 = Color3.fromRGB(50, 50, 50)
+AimbotVisuals.Position = UDim2.new(0, 362, 0, 12)
+AimbotVisuals.Size = UDim2.new(0, 114, 0, 16)
+AimbotVisuals.Font = Enum.Font.Code
+AimbotVisuals.Text = "Aimbot Visuals"
+AimbotVisuals.TextColor3 = Color3.fromRGB(255, 255, 255)
+AimbotVisuals.TextSize = 14.000
+AimbotVisuals.TextStrokeTransparency = 0.000
+
+AimbotSettings.Name = "AimbotSettings"
+AimbotSettings.Parent = CombatFrame
+AimbotSettings.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+AimbotSettings.BorderColor3 = Color3.fromRGB(50, 50, 50)
+AimbotSettings.Position = UDim2.new(0, 248, 0, 12)
+AimbotSettings.Size = UDim2.new(0, 114, 0, 16)
+AimbotSettings.Font = Enum.Font.Code
+AimbotSettings.Text = "Aimbot Settings"
+AimbotSettings.TextColor3 = Color3.fromRGB(255, 255, 255)
+AimbotSettings.TextSize = 14.000
+AimbotSettings.TextStrokeTransparency = 0.000
+
+Led5.Name = "Led-5"
+Led5.Parent = CombatFrame
+Led5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Led5.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Led5.Position = UDim2.new(0, 248, 0, 10)
+Led5.Size = UDim2.new(0, 228, 0, 2)
+
+ALed5.Name = "ALed-5"
+ALed5.Parent = CombatFrame
+ALed5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ALed5.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ALed5.Position = UDim2.new(0, 248, 0, 10)
+ALed5.Size = UDim2.new(0, 224, 0, 2)
+ALed5.Visible = false
+
+ABVBorder.Name = "ABVBorder"
+ABVBorder.Parent = CombatFrame
+ABVBorder.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+ABVBorder.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ABVBorder.BorderSizePixel = 0
+ABVBorder.Position = UDim2.new(0, 363, 0, 27)
+ABVBorder.Size = UDim2.new(0, 113, 0, 4)
+ABVBorder.Visible = false
+
+ABSBorder.Name = "ABSBorder"
+ABSBorder.Parent = CombatFrame
+ABSBorder.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ABSBorder.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ABSBorder.BorderSizePixel = 0
+ABSBorder.Position = UDim2.new(0, 248, 0, 27)
+ABSBorder.Size = UDim2.new(0, 114, 0, 3)
+ABSBorder.Visible = false
+
+BlatantFrame.Name = "BlatantFrame"
+BlatantFrame.Parent = SecondaryFrame
+BlatantFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+BlatantFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+BlatantFrame.Position = UDim2.new(0, 10, 0, 33)
+BlatantFrame.Size = UDim2.new(0, 486, 0, 498)
+BlatantFrame.Visible = false
+
+Title.Name = "Title"
+Title.Parent = SecondaryFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0, 1, 0, -25)
+Title.Size = UDim2.new(0, 281, 0, 24)
+Title.Font = Enum.Font.Code
+Title.Text = "Script | Game"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 16.000
+Title.TextStrokeTransparency = 0.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+MiscButton.Name = "MiscButton"
+MiscButton.Parent = SecondaryFrame
+MiscButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+MiscButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+MiscButton.Position = UDim2.new(0, 194, 0, 11)
+MiscButton.Size = UDim2.new(0, 110, 0, 21)
+MiscButton.Font = Enum.Font.Code
+MiscButton.Text = "Miscellaneous"
+MiscButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MiscButton.TextSize = 14.000
+MiscButton.TextStrokeTransparency = 0.000
+
+CombatButton.Name = "CombatButton"
+CombatButton.Parent = SecondaryFrame
+CombatButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+CombatButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+CombatButton.Position = UDim2.new(0, 10, 0, 11)
+CombatButton.Selectable = false
+CombatButton.Size = UDim2.new(0, 56, 0, 21)
+CombatButton.Font = Enum.Font.Code
+CombatButton.Text = "Combat"
+CombatButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CombatButton.TextSize = 14.000
+CombatButton.TextStrokeTransparency = 0.000
+
+VisualButton.Name = "VisualButton"
+VisualButton.Parent = SecondaryFrame
+VisualButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+VisualButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+VisualButton.Position = UDim2.new(0, 65, 0, 11)
+VisualButton.Selectable = false
+VisualButton.Size = UDim2.new(0, 64, 0, 21)
+VisualButton.Font = Enum.Font.Code
+VisualButton.Text = "Visuals"
+VisualButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+VisualButton.TextSize = 14.000
+VisualButton.TextStrokeTransparency = 0.000
+
+SettingsButton.Name = "SettingsButton"
+SettingsButton.Parent = SecondaryFrame
+SettingsButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+SettingsButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+SettingsButton.Position = UDim2.new(0, 304, 0, 11)
+SettingsButton.Selectable = false
+SettingsButton.Size = UDim2.new(0, 70, 0, 21)
+SettingsButton.Font = Enum.Font.Code
+SettingsButton.Text = "Settings"
+SettingsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsButton.TextSize = 14.000
+SettingsButton.TextStrokeTransparency = 0.000
+
+VisualBorder.Name = "VisualBorder"
+VisualBorder.Parent = SecondaryFrame
+VisualBorder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+VisualBorder.BorderSizePixel = 0
+VisualBorder.Position = UDim2.new(0, 65, 0, 31)
+VisualBorder.Size = UDim2.new(0, 64, 0, 5)
+VisualBorder.Visible = false
+
+SettingsBorder.Name = "SettingsBorder"
+SettingsBorder.Parent = SecondaryFrame
+SettingsBorder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SettingsBorder.BorderSizePixel = 0
+SettingsBorder.Position = UDim2.new(0, 304, 0, 31)
+SettingsBorder.Size = UDim2.new(0, 70, 0, 5)
+SettingsBorder.Visible = false
+
+MiscBorder.Name = "MiscBorder"
+MiscBorder.Parent = SecondaryFrame
+MiscBorder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MiscBorder.BorderSizePixel = 0
+MiscBorder.Position = UDim2.new(0, 194, 0, 31)
+MiscBorder.Size = UDim2.new(0, 109, 0, 2)
+MiscBorder.Visible = false
+
+CombatBorder.Name = "CombatBorder"
+CombatBorder.Parent = SecondaryFrame
+CombatBorder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CombatBorder.BorderSizePixel = 0
+CombatBorder.Position = UDim2.new(0, 10, 0, 31)
+CombatBorder.Size = UDim2.new(0, 54, 0, 4)
+CombatBorder.Visible = false
+
+BlatantButton.Name = "BlatantButton"
+BlatantButton.Parent = SecondaryFrame
+BlatantButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+BlatantButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+BlatantButton.Position = UDim2.new(0, 129, 0, 11)
+BlatantButton.Selectable = false
+BlatantButton.Size = UDim2.new(0, 65, 0, 21)
+BlatantButton.Font = Enum.Font.Code
+BlatantButton.Text = "Blatant"
+BlatantButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BlatantButton.TextSize = 14.000
+BlatantButton.TextStrokeTransparency = 0.000
+
+BlatantBorder.Name = "BlatantBorder"
+BlatantBorder.Parent = SecondaryFrame
+BlatantBorder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+BlatantBorder.BorderSizePixel = 0
+BlatantBorder.Position = UDim2.new(0, 129, 0, 31)
+BlatantBorder.Size = UDim2.new(0, 65, 0, 4)
+BlatantBorder.Visible = false
+
+VisualFrame.Name = "VisualFrame"
+VisualFrame.Parent = SecondaryFrame
+VisualFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+VisualFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+VisualFrame.Position = UDim2.new(0, 10, 0, 33)
+VisualFrame.Size = UDim2.new(0, 486, 0, 498)
+VisualFrame.Visible = false
+
+Frame.Parent = VisualFrame
+Frame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Frame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Frame.Position = UDim2.new(0, 248, 0, 10)
+Frame.Size = UDim2.new(0, 225, 0, 247)
+
+ESP.Name = "ESP"
+ESP.Parent = VisualFrame
+ESP.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ESP.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ESP.Position = UDim2.new(0, 10, 0, 12)
+ESP.Size = UDim2.new(0, 114, 0, 16)
+ESP.Font = Enum.Font.Code
+ESP.Text = "Enemy ESP"
+ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP.TextSize = 14.000
+ESP.TextStrokeTransparency = 0.000
+
+ESPSettings.Name = "ESPSettings"
+ESPSettings.Parent = VisualFrame
+ESPSettings.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ESPSettings.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ESPSettings.Position = UDim2.new(0, 124, 0, 12)
+ESPSettings.Size = UDim2.new(0, 114, 0, 16)
+ESPSettings.Font = Enum.Font.Code
+ESPSettings.Text = "Settings"
+ESPSettings.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESPSettings.TextSize = 14.000
+ESPSettings.TextStrokeTransparency = 0.000
+
+Setborder.Name = "Setborder"
+Setborder.Parent = VisualFrame
+Setborder.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Setborder.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Setborder.BorderSizePixel = 0
+Setborder.Position = UDim2.new(0, 124, 0, 27)
+Setborder.Size = UDim2.new(0, 114, 0, 3)
+Setborder.Visible = false
+
+ESPborder.Name = "ESPborder"
+ESPborder.Parent = VisualFrame
+ESPborder.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ESPborder.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ESPborder.BorderSizePixel = 0
+ESPborder.Position = UDim2.new(0, 10, 0, 27)
+ESPborder.Size = UDim2.new(0, 113, 0, 3)
+ESPborder.Visible = false
+
+Led1.Name = "Led-1"
+Led1.Parent = VisualFrame
+Led1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Led1.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Led1.Position = UDim2.new(0, 248, 0, 10)
+Led1.Size = UDim2.new(0, 225, 0, 2)
+
+ALed1.Name = "ALed-1"
+ALed1.Parent = VisualFrame
+ALed1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ALed1.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ALed1.Position = UDim2.new(0, 248, 0, 10)
+ALed1.Size = UDim2.new(0, 225, 0, 2)
+ALed1.Visible = false
+
+ALed2.Name = "ALed-2"
+ALed2.Parent = VisualFrame
+ALed2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ALed2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ALed2.Position = UDim2.new(0, 10, 0, 10)
+ALed2.Size = UDim2.new(0, 228, 0, 2)
+ALed2.Visible = false
+
+Led2.Name = "Led-2"
+Led2.Parent = VisualFrame
+Led2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Led2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Led2.Position = UDim2.new(0, 10, 0, 10)
+Led2.Size = UDim2.new(0, 228, 0, 2)
+
+SETFrame.Name = "SETFrame"
+SETFrame.Parent = VisualFrame
+SETFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+SETFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+SETFrame.Position = UDim2.new(0, 10, 0, 10)
+SETFrame.Size = UDim2.new(0, 228, 0, 247)
+SETFrame.Visible = false
+
+TeamCheck_2.Name = "TeamCheck"
+TeamCheck_2.Parent = SETFrame
+TeamCheck_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+TeamCheck_2.BackgroundTransparency = 1.000
+TeamCheck_2.BorderSizePixel = 0
+TeamCheck_2.Position = UDim2.new(0, 6, 0, 24)
+TeamCheck_2.Size = UDim2.new(0, 87, 0, 16)
+TeamCheck_2.Font = Enum.Font.Code
+TeamCheck_2.Text = "   Team Check"
+TeamCheck_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeamCheck_2.TextSize = 14.000
+TeamCheck_2.TextStrokeTransparency = 0.000
+TeamCheck_2.TextXAlignment = Enum.TextXAlignment.Left
+
+TeamCheckToggle_2.Name = "TeamCheckToggle"
+TeamCheckToggle_2.Parent = TeamCheck_2
+TeamCheckToggle_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+TeamCheckToggle_2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+TeamCheckToggle_2.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+TeamCheckToggle_2.Size = UDim2.new(0, 12, 0, 12)
+TeamCheckToggle_2.Font = Enum.Font.SourceSans
+TeamCheckToggle_2.Text = ""
+TeamCheckToggle_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TeamCheckToggle_2.TextSize = 14.000
+
+VisibilityCheck_2.Name = "VisibilityCheck"
+VisibilityCheck_2.Parent = SETFrame
+VisibilityCheck_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+VisibilityCheck_2.BackgroundTransparency = 1.000
+VisibilityCheck_2.BorderSizePixel = 0
+VisibilityCheck_2.Position = UDim2.new(0, 6, 0, 43)
+VisibilityCheck_2.Size = UDim2.new(0, 87, 0, 16)
+VisibilityCheck_2.Font = Enum.Font.Code
+VisibilityCheck_2.Text = "   Visibility Check"
+VisibilityCheck_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+VisibilityCheck_2.TextSize = 14.000
+VisibilityCheck_2.TextStrokeTransparency = 0.000
+VisibilityCheck_2.TextXAlignment = Enum.TextXAlignment.Left
+
+VisibilityCheckToggle_2.Name = "VisibilityCheckToggle"
+VisibilityCheckToggle_2.Parent = VisibilityCheck_2
+VisibilityCheckToggle_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+VisibilityCheckToggle_2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+VisibilityCheckToggle_2.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+VisibilityCheckToggle_2.Size = UDim2.new(0, 12, 0, 12)
+VisibilityCheckToggle_2.Font = Enum.Font.SourceSans
+VisibilityCheckToggle_2.Text = ""
+VisibilityCheckToggle_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+VisibilityCheckToggle_2.TextSize = 14.000
+
+DistanceDropDown.Name = "DistanceDropDown"
+DistanceDropDown.Parent = SETFrame
+DistanceDropDown.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+DistanceDropDown.BorderColor3 = Color3.fromRGB(50, 50, 50)
+DistanceDropDown.Position = UDim2.new(0, 6, 0, 81)
+DistanceDropDown.Size = UDim2.new(0, 216, 0, 18)
+DistanceDropDown.Font = Enum.Font.Code
+DistanceDropDown.Text = " Default"
+DistanceDropDown.TextColor3 = Color3.fromRGB(255, 255, 255)
+DistanceDropDown.TextSize = 14.000
+DistanceDropDown.TextStrokeTransparency = 0.000
+DistanceDropDown.TextXAlignment = Enum.TextXAlignment.Left
+
+ImageLabel_3.Parent = DistanceDropDown
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+ImageLabel_3.BackgroundTransparency = 1.000
+ImageLabel_3.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ImageLabel_3.Position = UDim2.new(0, 199, 0, 1)
+ImageLabel_3.Size = UDim2.new(0, 15, 0, 15)
+ImageLabel_3.Image = "http://www.roblox.com/asset/?id=9482956116"
+
+DDHolder_2.Name = "DDHolder"
+DDHolder_2.Parent = DistanceDropDown
+DDHolder_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+DDHolder_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DDHolder_2.Position = UDim2.new(0, 0, 0, 20)
+DDHolder_2.Size = UDim2.new(0, 216, 0, 54)
+DDHolder_2.Visible = false
+
+D2_2.Name = "D2"
+D2_2.Parent = DDHolder_2
+D2_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+D2_2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+D2_2.Position = UDim2.new(0, 0, 0, 19)
+D2_2.Size = UDim2.new(0, 216, 0, 18)
+D2_2.Selected = true
+D2_2.Font = Enum.Font.Code
+D2_2.Text = " Distance From Char"
+D2_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+D2_2.TextSize = 14.000
+D2_2.TextStrokeTransparency = 0.000
+D2_2.TextXAlignment = Enum.TextXAlignment.Left
+
+D3_2.Name = "D3"
+D3_2.Parent = DDHolder_2
+D3_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+D3_2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+D3_2.Position = UDim2.new(0, 0, 0, 37)
+D3_2.Size = UDim2.new(0, 216, 0, 18)
+D3_2.Selected = true
+D3_2.Font = Enum.Font.Code
+D3_2.Text = " Distance From Camera"
+D3_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+D3_2.TextSize = 14.000
+D3_2.TextStrokeTransparency = 0.000
+D3_2.TextXAlignment = Enum.TextXAlignment.Left
+
+D1_2.Name = "D1"
+D1_2.Parent = DDHolder_2
+D1_2.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+D1_2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+D1_2.Position = UDim2.new(0, 0, 0, -1)
+D1_2.Size = UDim2.new(0, 216, 0, 19)
+D1_2.Selected = true
+D1_2.Font = Enum.Font.Code
+D1_2.Text = " Default"
+D1_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+D1_2.TextSize = 14.000
+D1_2.TextStrokeTransparency = 0.000
+D1_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Distance.Name = "Distance"
+Distance.Parent = SETFrame
+Distance.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Distance.BackgroundTransparency = 1.000
+Distance.Position = UDim2.new(0, 6, 0, 62)
+Distance.Size = UDim2.new(0, 180, 0, 16)
+Distance.Font = Enum.Font.Code
+Distance.Text = "Distance From Options"
+Distance.TextColor3 = Color3.fromRGB(255, 255, 255)
+Distance.TextSize = 14.000
+Distance.TextStrokeTransparency = 0.000
+Distance.TextXAlignment = Enum.TextXAlignment.Left
+
+ESPWelcomeFrame.Name = "ESPWelcomeFrame"
+ESPWelcomeFrame.Parent = VisualFrame
+ESPWelcomeFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ESPWelcomeFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ESPWelcomeFrame.Position = UDim2.new(0, 10, 0, 10)
+ESPWelcomeFrame.Size = UDim2.new(0, 228, 0, 247)
+
+ESPINFO.Name = "ESPINFO"
+ESPINFO.Parent = ESPWelcomeFrame
+ESPINFO.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ESPINFO.BorderSizePixel = 0
+ESPINFO.Position = UDim2.new(0.100000001, 0, 0.160728797, 0)
+ESPINFO.Size = UDim2.new(0, 180, 0, 180)
+ESPINFO.Font = Enum.Font.Roboto
+ESPINFO.Text = "'Extrasensory perception' (ESP) displays contextual information such as the health, name, equipment, position and/or orientation of other participants as navigation/directional markers"
+ESPINFO.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESPINFO.TextSize = 15.000
+ESPINFO.TextWrapped = true
+ESPINFO.TextXAlignment = Enum.TextXAlignment.Left
+ESPINFO.TextYAlignment = Enum.TextYAlignment.Top
+
+ESPFrame.Name = "ESPFrame"
+ESPFrame.Parent = VisualFrame
+ESPFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ESPFrame.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ESPFrame.Position = UDim2.new(0, 10, 0, 10)
+ESPFrame.Size = UDim2.new(0, 228, 0, 247)
+ESPFrame.Visible = false
+
+BoxESP.Name = "Box ESP"
+BoxESP.Parent = ESPFrame
+BoxESP.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+BoxESP.BackgroundTransparency = 1.000
+BoxESP.BorderSizePixel = 0
+BoxESP.Position = UDim2.new(0, 6, 0, 43)
+BoxESP.Size = UDim2.new(0, 87, 0, 16)
+BoxESP.Font = Enum.Font.Code
+BoxESP.Text = "   Boxes"
+BoxESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+BoxESP.TextSize = 14.000
+BoxESP.TextStrokeTransparency = 0.000
+BoxESP.TextXAlignment = Enum.TextXAlignment.Left
+
+BoxToggle.Name = "BoxToggle"
+BoxToggle.Parent = BoxESP
+BoxToggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+BoxToggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+BoxToggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+BoxToggle.Size = UDim2.new(0, 12, 0, 12)
+BoxToggle.Font = Enum.Font.SourceSans
+BoxToggle.Text = ""
+BoxToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+BoxToggle.TextSize = 14.000
+
+Name.Name = "Name"
+Name.Parent = ESPFrame
+Name.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Name.BackgroundTransparency = 1.000
+Name.BorderSizePixel = 0
+Name.Position = UDim2.new(0, 6, 0, 24)
+Name.Size = UDim2.new(0, 87, 0, 16)
+Name.Font = Enum.Font.Code
+Name.Text = "   Nametag"
+Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name.TextSize = 14.000
+Name.TextStrokeTransparency = 0.000
+Name.TextXAlignment = Enum.TextXAlignment.Left
+
+NameToggle.Name = "NameToggle"
+NameToggle.Parent = Name
+NameToggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+NameToggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+NameToggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+NameToggle.Size = UDim2.new(0, 12, 0, 12)
+NameToggle.Font = Enum.Font.SourceSans
+NameToggle.Text = ""
+NameToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+NameToggle.TextSize = 14.000
+
+DisplayDistance.Name = "DisplayDistance"
+DisplayDistance.Parent = ESPFrame
+DisplayDistance.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+DisplayDistance.BackgroundTransparency = 1.000
+DisplayDistance.BorderSizePixel = 0
+DisplayDistance.Position = UDim2.new(0, 6, 0, 62)
+DisplayDistance.Size = UDim2.new(0, 87, 0, 16)
+DisplayDistance.Font = Enum.Font.Code
+DisplayDistance.Text = "   Display Distance"
+DisplayDistance.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisplayDistance.TextSize = 14.000
+DisplayDistance.TextStrokeTransparency = 0.000
+DisplayDistance.TextXAlignment = Enum.TextXAlignment.Left
+
+Distoggle.Name = "Distoggle"
+Distoggle.Parent = DisplayDistance
+Distoggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+Distoggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Distoggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+Distoggle.Size = UDim2.new(0, 12, 0, 12)
+Distoggle.Font = Enum.Font.SourceSans
+Distoggle.Text = ""
+Distoggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+Distoggle.TextSize = 14.000
+
+HealthBar.Name = "HealthBar"
+HealthBar.Parent = ESPFrame
+HealthBar.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+HealthBar.BackgroundTransparency = 1.000
+HealthBar.BorderSizePixel = 0
+HealthBar.Position = UDim2.new(0, 6, 0, 81)
+HealthBar.Size = UDim2.new(0, 87, 0, 16)
+HealthBar.Font = Enum.Font.Code
+HealthBar.Text = "   HealthBar"
+HealthBar.TextColor3 = Color3.fromRGB(255, 255, 255)
+HealthBar.TextSize = 14.000
+HealthBar.TextStrokeTransparency = 0.000
+HealthBar.TextXAlignment = Enum.TextXAlignment.Left
+
+HealthBarToggle.Name = "HealthBarToggle"
+HealthBarToggle.Parent = HealthBar
+HealthBarToggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+HealthBarToggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+HealthBarToggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+HealthBarToggle.Size = UDim2.new(0, 12, 0, 12)
+HealthBarToggle.Font = Enum.Font.SourceSans
+HealthBarToggle.Text = ""
+HealthBarToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+HealthBarToggle.TextSize = 14.000
+
+ShowHealth.Name = "ShowHealth"
+ShowHealth.Parent = ESPFrame
+ShowHealth.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ShowHealth.BackgroundTransparency = 1.000
+ShowHealth.BorderSizePixel = 0
+ShowHealth.Position = UDim2.new(0, 6, 0, 100)
+ShowHealth.Size = UDim2.new(0, 87, 0, 16)
+ShowHealth.Font = Enum.Font.Code
+ShowHealth.Text = "   Show Health"
+ShowHealth.TextColor3 = Color3.fromRGB(255, 255, 255)
+ShowHealth.TextSize = 14.000
+ShowHealth.TextStrokeTransparency = 0.000
+ShowHealth.TextXAlignment = Enum.TextXAlignment.Left
+
+ShowHealthToggle.Name = "ShowHealthToggle"
+ShowHealthToggle.Parent = ShowHealth
+ShowHealthToggle.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+ShowHealthToggle.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ShowHealthToggle.Position = UDim2.new(-0.00692309439, 0, 0.0925000012, 0)
+ShowHealthToggle.Size = UDim2.new(0, 12, 0, 12)
+ShowHealthToggle.Font = Enum.Font.SourceSans
+ShowHealthToggle.Text = ""
+ShowHealthToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+ShowHealthToggle.TextSize = 14.000
+
+Exploits.Name = "Exploits"
+Exploits.Parent = SecondaryFrame
+
+-- Scripts:
+
+local function VGTQ_fake_script() -- ScreenGui.MouseScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	
+	Mouse.Icon = 'http://www.roblox.com/asset/?id=5025970007'
+end
+coroutine.wrap(VGTQ_fake_script)()
+local function NAIB_fake_script() -- OpenButton.Script 
+	local script = Instance.new('Script', OpenButton)
+
+	local OpenButton = script.Parent
+	local UI = script.Parent.Parent.MainLoginFrame
+	local Client = game:GetService('Players').LocalPlayer
+	local debounce = false
+	
+	if Client.UserId == 3094069114 then
+		script.Parent.Text = 'Loading...'
+		wait(3)
+	
+		GUI:TweenPosition(
+			UDim2.new(0.3, 0,-0.03, 0),
+			'Out',
+			'Sine',
+			3,
+			false,
+			nil	
+		)
+		script.Parent:Destroy()
+	end
+	
+	OpenButton.MouseButton1Click:Connect(function()
+		if not debounce then
+		debounce = true
+		UI:TweenPosition(
+			UDim2.new(0.4, 0,0.195, 0),
+			'Out',
+			'Sine',
+			3,
+			false,
+			nil
+			)
+		end
+		script.Parent:Destroy()
+	end)
+end
+coroutine.wrap(NAIB_fake_script)()
+local function PJNXW_fake_script() -- LoginButton.LocalScript 
+	local script = Instance.new('LocalScript', LoginButton)
+
+	GUI = script.Parent.Parent.Parent.BBFrame
+	local Client = game:GetService('Players').LocalPlayer
+	local debounce = false
+	
+	Username = script.Parent.Parent.UsernameBox
+	Password = script.Parent.Parent.PasswordBox
+	
+	wait(3)
+	if Client.UserId == 3094069114 then
+		script.Parent.Text = 'Loading...'
+		wait(3)
+	
+		GUI:TweenPosition(
+			UDim2.new(0.3, 0,-0.03, 0),
+			'Out',
+			'Sine',
+			3,
+			false,
+			nil	
+		)
+		script.Parent.Parent:Destroy()
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		print(1)
+		if not debounce then
+			debounce = true
+			if  Username.Text == 'Prae' and Password.Text == '3082' or Username.Text == 'Aty' and Password.Text == '5970' or Client.UserId == 3094069114 then
+				script.Parent.Text = 'Loading...'
+				wait(3)
+				
+				GUI:TweenPosition(
+					UDim2.new(0.3, 0,-0.03, 0),
+					'Out',
+					'Sine',
+					3,
+					false,
+					nil	
+				)
+				script.Parent.Parent:Destroy()
+			else
+				script.Parent.Text = 'Error!'
+				wait(3)
+				script.Parent.Text = 'Login'
+			end
+			wait()
+			debounce = false
+			end
+	end)
+end
+coroutine.wrap(PJNXW_fake_script)()
+local function YJVGS_fake_script() -- BBFrame.KeyBind 
+	local script = Instance.new('LocalScript', BBFrame)
+
+	local UserInputService = game:GetService('UserInputService')
+	
+	
+	UserInputService.InputBegan:Connect(function(Input, gameProcessedEvent)
+		if Input.KeyCode == Enum.KeyCode.LeftAlt then
+			script.Parent.Active = not script.Parent.Active
+			script.Parent.Visible = not script.Parent.Visible
+	
+		end
+	end)
+end
+coroutine.wrap(YJVGS_fake_script)()
+local function FWUPIGR_fake_script() -- BBFrame.DragScript 
+	local script = Instance.new('LocalScript', BBFrame)
+
+	local UIS = game:GetService('UserInputService')
+	local Players = game:GetService('Players')
+	local Mouse = Players.LocalPlayer:GetMouse()
+	local RenderStepped = game:GetService('RunService').RenderStepped
+	local TB = script.Parent
+	script.Parent.InputBegan:Connect(function(Input)
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			local OrgPos = Vector2.new(
+				Mouse.X - TB.AbsolutePosition.X,
+				Mouse.Y - TB.AbsolutePosition.Y
+			)
+			local OrgAnc_X = TB.Size.X.Offset * TB.AnchorPoint.X
+			local OrgAnc_Y = TB.Size.Y.Offset * TB.AnchorPoint.Y
+			
+			while UIS:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+				
+				TB.Position = UDim2.new(
+					0,
+					Mouse.X - OrgPos.X + OrgAnc_X,
+					0,
+					Mouse.Y - OrgPos.Y + OrgAnc_Y
+				)
+				
+				RenderStepped:Wait()
+			end
+			if TB.AbsolutePosition.Y <= -58  then
+				TB.Position = UDim2.new(TB.Position.X.Scale, TB.Position.X.Offset , TB.Position.Y.Scale, TB.Position.Y.Offset + 30)
+			end
+		end
+	end)
+end
+coroutine.wrap(FWUPIGR_fake_script)()
+local function NAXJKDR_fake_script() -- WelcomeLabel.LocalScript 
+	local script = Instance.new('LocalScript', WelcomeLabel)
+
+	local Tick = tick()
+	local renderStepped = game:GetService('RunService').RenderStepped
+	local Hue = 0
+	
+	
+	while renderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			script.Parent.TextColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+	
+end
+coroutine.wrap(NAXJKDR_fake_script)()
+local function EHFHYH_fake_script() -- BackGroundColor.Script 
+	local script = Instance.new('Script', BackGroundColor)
+
+	BGB = script.Parent
+	
+	getgenv().BackGroundColor = Color3.fromRGB(20,20,20)
+end
+coroutine.wrap(EHFHYH_fake_script)()
+local function OGEL_fake_script() -- MainColor_2.Script 
+	local script = Instance.new('Script', MainColor_2)
+
+	MCB = script.Parent
+	
+	getgenv().MainColor = Color3.fromRGB(28,28,28)
+end
+coroutine.wrap(OGEL_fake_script)()
+local function EMIST_fake_script() -- OutlineColor_2.Script 
+	local script = Instance.new('Script', OutlineColor_2)
+
+	OLB = script.Parent
+	
+	getgenv().OutLineColor = Color3.fromRGB(50,50,50)
+end
+coroutine.wrap(EMIST_fake_script)()
+local function IHLG_fake_script() -- AccentColor_2.Script 
+	local script = Instance.new('Script', AccentColor_2)
+
+	ACB = script.Parent
+	
+	getgenv().AccentColor = Color3.fromRGB(40,50,200)
+end
+coroutine.wrap(IHLG_fake_script)()
+local function HMJZKGR_fake_script() -- ColorChangeon.LocalScript 
+	local script = Instance.new('LocalScript', ColorChangeon)
+
+	
+	local Tick = tick()
+	local renderStepped = game:GetService('RunService').RenderStepped
+	local Hue = 0
+	
+	
+	while renderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+	
+end
+coroutine.wrap(HMJZKGR_fake_script)()
+local function CUYBV_fake_script() -- ColorChangeon.Script 
+	local script = Instance.new('Script', ColorChangeon)
+
+	local on = script.Parent
+	local off = script.Parent.Parent["ColorChange-off"]
+	
+	on.MouseButton1Click:Connect(function()	
+		off.Visible = true
+		on.Visible = false
+		getgenv().Rainbow_On = false
+		getgenv().Rainbow_Off = true
+	end)
+	
+	off.MouseButton1Click:Connect(function()
+		off.Visible = false
+		on.Visible = true
+		getgenv().Rainbow_On = true
+		getgenv().Rainbow_Off = false
+	end)
+	
+	
+end
+coroutine.wrap(CUYBV_fake_script)()
+local function WEMV_fake_script() -- ALED3.Script 
+	local script = Instance.new('Script', ALED3)
+
+	while true do
+		if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			script.Parent.Visible = false
+			script.Parent.Parent["Led-3"].Visible = true
+		elseif getgenv().Rainbow_Off == true and getgenv().Rainbow_On == false then
+			script.Parent.Visible = true
+			script.Parent.Parent["Led-3"].Visible = false
+		end
+		wait()
+	end
+	
+end
+coroutine.wrap(WEMV_fake_script)()
+local function HQVYD_fake_script() -- Led3.LocalScript 
+	local script = Instance.new('LocalScript', Led3)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	
+	while game:GetService('RunService').RenderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+	
+end
+coroutine.wrap(HQVYD_fake_script)()
+local function LEISLJ_fake_script() -- SilentAimToggle.LocalScript 
+	local script = Instance.new('LocalScript', SilentAimToggle)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().SilentAim.SilentAim == false then
+	
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+	
+			getgenv().SilentAim.SilentAim = true
+		elseif getgenv().SilentAim.SilentAim == true then
+	
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().SilentAim.SilentAim = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().SilentAim.SilentAim == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().SilentAim.SilentAim == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+	
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(LEISLJ_fake_script)()
+local function XIRAJV_fake_script() -- MissChance_Slider.LocalScript 
+	local script = Instance.new('LocalScript', MissChance_Slider)
+
+	--Variables-------------------------------------------------
+	local UIS = game:GetService('UserInputService')
+	local Slider = script.Parent
+	local InnerSliderA = script.Parent.InnerSliderA
+	local InnerSliderB = script.Parent.InnerSliderB
+	local SliderInfo = script.Parent.FOVInfo
+	local player = game.Players.LocalPlayer
+	local RUS = game:GetService('RunService')
+	SliderInfo.Text = '0%/100%'
+	--Properties------------------------------------------
+	local Held = false                                                    -- Variable for if you are holding down the slider, holds information that the script would need.
+	local factor = 0.01                                                   --Step is the factor
+	
+	--Script------------------------------------------------------
+	function Round(number, factor)                            
+		if factor == 0 then                                               -- IF there is no factor then it just returns the % that the innerslider covers              
+			return number        
+		end
+		return math.floor(number/factor+0.5) * factor                     -- Returns the sum of this to be the value of Pos, would now be an increment of 'factor'  e.g. only goes up in 0.01 by rounding down anything that isnt an increment/factor of 0.01 to an increment/factor of 0.01.  
+	end
+	
+	
+	Slider.MouseButton1Down:Connect(function()                       -- When you click and are holding down the slider with LMB
+		Held = true                                                       -- Makes held variable true
+	end)
+	InnerSliderA.MouseButton1Down:Connect(function()
+		Held = true
+	end)
+	InnerSliderB.MouseButton1Down:Connect(function()
+		Held = true
+	end)
+	UIS.InputEnded:Connect(function(Input, Processed)                     -- When you stop holding down the slider with LMB
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Held = false                                                  -- Makes held variable false
+		end
+	end)
+	
+	RUS.RenderStepped:Connect(function(delta)                            				  -- An event that fires prior to the frame being rendered
+		if Held then                                                     				  -- If the slider is being held then
+			local MousePos = UIS:GetMouseLocation().X                  				      -- gets the X value of where the Mouse is at on the screen
+			local ISPos1 = InnerSliderA.Position                              		      -- ISPos is the InnerSlider's Position
+			local ISSize1 = InnerSliderA.Size                                               -- ISSize is the InnerSlider's Size
+			local ISPos2 = InnerSliderB.Position 
+			local ISSize2 = InnerSliderB.Size
+			local SliderPos = Slider.AbsolutePosition.X                  				  -- Gets the X value of the Slider's Position
+			local SliderSize = Slider.AbsoluteSize.X                                      -- Gets the X value of the Slider's Size
+	
+			local Pos = Round((MousePos-SliderPos)/SliderSize, factor)                    -- '(MousePos-SliderPos)/SliderSize is the % of the slider that the inner slider covers. 1 is 100%, 0 is 0%. (With mouse it'd be the % of the way to the end of the slider),
+			                                                                              -- 'Round' sends the values to be rounded in a function, where Pos would be the value that the function returns
+			local Percentage = math.clamp(Pos,0,1)                                        -- For math.clamp, The first argument is the value you want to clamp, the 2nd is the minimum(smallest) value that the clamped value can be, 3rd is the maximum(biggest) value it can be
+	
+	
+			InnerSliderA.Size = UDim2.new(Percentage, 0, ISSize1.Y.Scale, ISSize1.Y.Offset)  -- Makes the InnerSlider's X Scale according to the % it should cover
+			InnerSliderB.Size = UDim2.new(Percentage, 0, ISSize2.Y.Scale, ISSize2.Y.Offset)
+			SliderInfo.Text = math.floor(Percentage * 100)..'%/100%'                                -- Makes SliderInfo the % that the innerslider covers
+			getgenv().SilentAim.MissChance =  math.floor(Percentage * 100)
+		end 
+	end)
+	
+	
+	
+	
+	
+end
+coroutine.wrap(XIRAJV_fake_script)()
+local function AAUMG_fake_script() -- InnerSliderB.LocalScript 
+	local script = Instance.new('LocalScript', InnerSliderB)
+
+	local Tick = tick()
+	local renderStepped = game:GetService('RunService').RenderStepped
+	local Hue = 0
+	
+	
+	while renderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+			script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+end
+coroutine.wrap(AAUMG_fake_script)()
+local function JGSQL_fake_script() -- InnerSliderB.Script 
+	local script = Instance.new('Script', InnerSliderB)
+
+	local B = script.Parent
+	local A = script.Parent.Parent.InnerSliderA
+	local RenderStepped = game:GetService('RunService').RenderStepped
+	B.Visible = true
+	A.Visible = false
+	
+	
+	local loop = true
+	while loop == true do 
+		if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			B.Visible = true
+			A.Visible = false
+			A.BackgroundColor3 = getgenv().AccentColor
+		end
+		if getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+			B.Visible = false
+			A.Visible = true
+			A.BackgroundColor3 = getgenv().AccentColor
+		end
+		wait()
+	end
+	
+end
+coroutine.wrap(JGSQL_fake_script)()
+local function XIRYG_fake_script() -- HeadShot_Slider.LocalScript 
+	local script = Instance.new('LocalScript', HeadShot_Slider)
+
+	--Variables-------------------------------------------------
+	local UIS = game:GetService('UserInputService')
+	local Slider = script.Parent
+	local InnerSliderA = script.Parent.InnerSliderA
+	local InnerSliderB = script.Parent.InnerSliderB
+	local SliderInfo = script.Parent.FOVInfo
+	local player = game.Players.LocalPlayer
+	local RUS = game:GetService('RunService')
+	SliderInfo.Text = '0%/100%'
+	--Properties------------------------------------------
+	local Held = false                                                    -- Variable for if you are holding down the slider, holds information that the script would need.
+	local factor = 0.01                                                   --Step is the factor
+	
+	--Script------------------------------------------------------
+	function Round(number, factor)                            
+		if factor == 0 then                                               -- IF there is no factor then it just returns the % that the innerslider covers              
+			return number        
+		end
+		return math.floor(number/factor+0.5) * factor                     -- Returns the sum of this to be the value of Pos, would now be an increment of 'factor'  e.g. only goes up in 0.01 by rounding down anything that isnt an increment/factor of 0.01 to an increment/factor of 0.01.  
+	end
+	
+	
+	Slider.MouseButton1Down:Connect(function()                       -- When you click and are holding down the slider with LMB
+		Held = true                                                       -- Makes held variable true
+	end)
+	InnerSliderA.MouseButton1Down:Connect(function()
+		Held = true
+	end)
+	InnerSliderB.MouseButton1Down:Connect(function()
+		Held = true
+	end)
+	UIS.InputEnded:Connect(function(Input, Processed)                     -- When you stop holding down the slider with LMB
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Held = false                                                  -- Makes held variable false
+		end
+	end)
+	
+	RUS.RenderStepped:Connect(function(delta)                            				  -- An event that fires prior to the frame being rendered
+		if Held then                                                     				  -- If the slider is being held then
+			local MousePos = UIS:GetMouseLocation().X                  				      -- gets the X value of where the Mouse is at on the screen
+			local ISPos1 = InnerSliderA.Position                              		      -- ISPos is the InnerSlider's Position
+			local ISSize1 = InnerSliderA.Size                                               -- ISSize is the InnerSlider's Size
+			local ISPos2 = InnerSliderB.Position 
+			local ISSize2 = InnerSliderB.Size
+			local SliderPos = Slider.AbsolutePosition.X                  				  -- Gets the X value of the Slider's Position
+			local SliderSize = Slider.AbsoluteSize.X                                      -- Gets the X value of the Slider's Size
+	
+			local Pos = Round((MousePos-SliderPos)/SliderSize, factor)                    -- '(MousePos-SliderPos)/SliderSize is the % of the slider that the inner slider covers. 1 is 100%, 0 is 0%. (With mouse it'd be the % of the way to the end of the slider),
+			                                                                              -- 'Round' sends the values to be rounded in a function, where Pos would be the value that the function returns
+			local Percentage = math.clamp(Pos,0,1)                                        -- For math.clamp, The first argument is the value you want to clamp, the 2nd is the minimum(smallest) value that the clamped value can be, 3rd is the maximum(biggest) value it can be
+	
+	
+			InnerSliderA.Size = UDim2.new(Percentage, 0, ISSize1.Y.Scale, ISSize1.Y.Offset)  -- Makes the InnerSlider's X Scale according to the % it should cover
+			InnerSliderB.Size = UDim2.new(Percentage, 0, ISSize2.Y.Scale, ISSize2.Y.Offset)
+			SliderInfo.Text = math.floor(Percentage * 100)..'%/100%'                                -- Makes SliderInfo the % that the innerslider covers
+			--HeadShotChance =  math.floor(Percentage * 100)
+		end 
+	end)
+	
+	
+	
+	
+	
+end
+coroutine.wrap(XIRYG_fake_script)()
+local function VXVBUF_fake_script() -- InnerSliderB_2.LocalScript 
+	local script = Instance.new('LocalScript', InnerSliderB_2)
+
+	local Tick = tick()
+	local renderStepped = game:GetService('RunService').RenderStepped
+	local Hue = 0
+	
+	
+	while renderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+			script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+end
+coroutine.wrap(VXVBUF_fake_script)()
+local function HCAE_fake_script() -- InnerSliderB_2.Script 
+	local script = Instance.new('Script', InnerSliderB_2)
+
+	local B = script.Parent
+	local A = script.Parent.Parent.InnerSliderA
+	local RenderStepped = game:GetService('RunService').RenderStepped
+	B.Visible = true
+	A.Visible = false
+	
+	
+	local loop = true
+	while loop == true do 
+		if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			B.Visible = true
+			A.Visible = false
+			A.BackgroundColor3 = getgenv().AccentColor
+		end
+		if getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+			B.Visible = false
+			A.Visible = true
+			A.BackgroundColor3 = getgenv().AccentColor
+		end
+		wait()
+	end
+	
+end
+coroutine.wrap(HCAE_fake_script)()
+local function CNRC_fake_script() -- AimbotToggle.LocalScript 
+	local script = Instance.new('LocalScript', AimbotToggle)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().Aimbot.AimbotEnabled == false then
+		
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+	
+			getgenv().Aimbot.AimbotEnabled = true
+		elseif getgenv().Aimbot.AimbotEnabled == true then
+	
+	
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().Aimbot.AimbotEnabled = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().Aimbot.AimbotEnabled == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().Aimbot.AimbotEnabled == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+				
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(CNRC_fake_script)()
+local function USZQ_fake_script() -- KeyBind.KeybindSetter 
+	local script = Instance.new('LocalScript', KeyBind)
+
+	local UserInputService = game:GetService('UserInputService')
+	
+	local debounce = false
+	--Default KeyBind--
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		debounce = true
+		UserInputService.InputBegan:Connect(function(Input, Processed)
+			if debounce then
+				if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.MouseButton2 then 
+					
+					local Inputted = tostring(Input.UserInputType)
+					local Result = string.gsub(Inputted, 'Enum.UserInputType.', '')
+					
+					if Result == 'MouseButton1' then
+						Result = 'LMB'
+					elseif Result == 'MouseButton2'then
+						Result = 'RMB'
+					end
+					
+					script.Parent.Text = Result
+					
+					getgenv().AimbotKeyBind = Input.UserInputType
+						
+				elseif Input.UserInputType == Enum.UserInputType.Keyboard then
+					
+					local Inputted = tostring(Input.KeyCode)
+					local Result = string.gsub(Inputted, 'Enum.KeyCode.', '')
+					
+					script.Parent.Text = Result
+					
+					getgenv().AimbotKeyBind = Input.KeyCode
+					
+				end
+				debounce = false
+			end
+		end)
+	end)
+	
+	
+end
+coroutine.wrap(USZQ_fake_script)()
+local function LTSU_fake_script() -- TeamCheckToggle.LocalScript 
+	local script = Instance.new('LocalScript', TeamCheckToggle)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().Aimbot.TeamCheck == false then
+	
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+	
+			getgenv().Aimbot.TeamCheck = true
+		elseif getgenv().Aimbot.TeamCheck == true then
+	
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().Aimbot.TeamCheck = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().Aimbot.TeamCheck == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1)
+				
+			elseif getgenv().Aimbot.TeamCheck == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+	
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(LTSU_fake_script)()
+local function PMGMTFP_fake_script() -- VisibilityCheckToggle.LocalScript 
+	local script = Instance.new('LocalScript', VisibilityCheckToggle)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().Aimbot.VisibleCheck == false then
+	
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+	
+			getgenv().Aimbot.VisibleCheck = true
+		elseif getgenv().Aimbot.VisibleCheck == true then
+	
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().Aimbot.VisibleCheck = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().Aimbot.VisibleCheck == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().Aimbot.VisibleCheck == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+	
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(PMGMTFP_fake_script)()
+local function ODMRSRP_fake_script() -- FOV_Slider.LocalScript 
+	local script = Instance.new('LocalScript', FOV_Slider)
+
+	--Variables-------------------------------------------------
+	local UIS = game:GetService('UserInputService')
+	local Slider = script.Parent
+	local InnerSliderA = script.Parent.InnerSliderA
+	local InnerSliderB = script.Parent.InnerSliderB
+	local SliderInfo = script.Parent.FOVInfo
+	local player = game.Players.LocalPlayer
+	local RUS = game:GetService('RunService')
+	SliderInfo.Text = '0/10'
+	--Properties------------------------------------------
+	local Held = false                                                    -- Variable for if you are holding down the slider, holds information that the script would need.
+	local factor = 0.1                                                   --Step is the factor
+	
+	--Script------------------------------------------------------
+	function Round(number, factor)                            
+		if factor == 0 then                                               -- IF there is no factor then it just returns the % that the innerslider covers              
+			return number        
+		end
+		return math.floor(number/factor+0.5) * factor                     -- Returns the sum of this to be the value of Pos, would now be an increment of 'factor'  e.g. only goes up in 0.01 by rounding down anything that isnt an increment/factor of 0.01 to an increment/factor of 0.01.  
+	end
+	
+	
+	Slider.MouseButton1Down:Connect(function()                       -- When you click and are holding down the slider with LMB
+		Held = true                                                       -- Makes held variable true
+	end)
+	InnerSliderA.MouseButton1Down:Connect(function()
+		Held = true
+	end)
+	InnerSliderB.MouseButton1Down:Connect(function()
+		Held = true
+	end)
+	UIS.InputEnded:Connect(function(Input, Processed)                     -- When you stop holding down the slider with LMB
+		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			Held = false                                                  -- Makes held variable false
+		end
+	end)
+	
+	RUS.RenderStepped:Connect(function(delta)                            				  -- An event that fires prior to the frame being rendered
+		if Held then                                                     				  -- If the slider is being held then
+			local MousePos = UIS:GetMouseLocation().X                  				      -- gets the X value of where the Mouse is at on the screen
+			local ISPos1 = InnerSliderA.Position                              		      -- ISPos is the InnerSlider's Position
+			local ISSize1 = InnerSliderA.Size                                               -- ISSize is the InnerSlider's Size
+			local ISPos2 = InnerSliderB.Position 
+			local ISSize2 = InnerSliderB.Size
+			local SliderPos = Slider.AbsolutePosition.X                  				  -- Gets the X value of the Slider's Position
+			local SliderSize = Slider.AbsoluteSize.X                                      -- Gets the X value of the Slider's Size
+	
+			local Pos = Round((MousePos-SliderPos)/SliderSize, factor)                    -- '(MousePos-SliderPos)/SliderSize is the % of the slider that the inner slider covers. 1 is 100%, 0 is 0%. (With mouse it'd be the % of the way to the end of the slider),
+			                                                                              -- 'Round' sends the values to be rounded in a function, where Pos would be the value that the function returns
+			local Percentage = math.clamp(Pos,0,1)                                        -- For math.clamp, The first argument is the value you want to clamp, the 2nd is the minimum(smallest) value that the clamped value can be, 3rd is the maximum(biggest) value it can be
+	
+	
+			InnerSliderA.Size = UDim2.new(Percentage, 0, ISSize1.Y.Scale, ISSize1.Y.Offset)  -- Makes the InnerSlider's X Scale according to the % it should cover
+			InnerSliderB.Size = UDim2.new(Percentage, 0, ISSize2.Y.Scale, ISSize2.Y.Offset)
+			SliderInfo.Text = math.floor(Percentage * 10)..'/10'                                -- Makes SliderInfo the % that the innerslider covers
+			getgenv().AimbotFOV.CircleRadius =  math.floor(Percentage * 200)
+		end 
+	end)
+	
+	
+	
+	
+	
+end
+coroutine.wrap(ODMRSRP_fake_script)()
+local function PEQA_fake_script() -- InnerSliderB_3.LocalScript 
+	local script = Instance.new('LocalScript', InnerSliderB_3)
+
+	local Tick = tick()
+	local renderStepped = game:GetService('RunService').RenderStepped
+	local Hue = 0
+	
+	
+	while renderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+			script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+end
+coroutine.wrap(PEQA_fake_script)()
+local function OLLM_fake_script() -- InnerSliderB_3.Script 
+	local script = Instance.new('Script', InnerSliderB_3)
+
+	local B = script.Parent
+	local A = script.Parent.Parent.InnerSliderA
+	local RenderStepped = game:GetService('RunService').RenderStepped
+	B.Visible = true
+	A.Visible = false
+	
+	
+	local loop = true
+	while loop == true do 
+		if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			B.Visible = true
+			A.Visible = false
+		end
+		if getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+			B.Visible = false
+			A.Visible = true
+		end
+		wait()
+	end
+	
+end
+coroutine.wrap(OLLM_fake_script)()
+local function IFAMGH_fake_script() -- IgnoreFOVToggle.LocalScript 
+	local script = Instance.new('LocalScript', IgnoreFOVToggle)
+
+	local Toggle = false
+	local Tick = tick()
+	local Hue = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Toggle == false then
+			Toggle = true
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+	
+			--getgenv().Aimbot.AimbotEnabled = true
+		elseif Toggle == true then
+	
+			Toggle = false
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			--getgenv().Aimbot.AimbotEnabled = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if Toggle == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif Toggle == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+				
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(IFAMGH_fake_script)()
+local function YOGRIK_fake_script() -- SilentAim_2.Script 
+	local script = Instance.new('Script', SilentAim_2)
+
+	local SAB = script.Parent
+	local ABB = script.Parent.Parent.Aimbot
+	local ABF = script.Parent.Parent.AimBotFrame
+	local SAF = script.Parent.Parent.SilentAimFrame
+	local WF = script.Parent.Parent.AimbotFrame
+	local ABBo = script.Parent.Parent.AimBotborder
+	local SABo = script.Parent.Parent.SilentAimborder
+	
+	SAB.MouseButton1Click:Connect(function()
+		if ABF.Visible == true or WF.Visible == true  then
+			ABF.Visible = false
+			SAF.Visible = true
+			WF.Visible = false
+			SAB.BackgroundColor3 = getgenv().BackGroundColor
+			ABB.BackgroundColor3 = getgenv().MainColor
+			ABBo.Visible = false
+			SABo.Visible = true
+		end
+	end)
+end
+coroutine.wrap(YOGRIK_fake_script)()
+local function EJXGAI_fake_script() -- Aimbot.Script 
+	local script = Instance.new('Script', Aimbot)
+
+	local ABB = script.Parent
+	local SAB = script.Parent.Parent["Silent Aim"]
+	local ABF = script.Parent.Parent.AimBotFrame
+	local SAF = script.Parent.Parent.SilentAimFrame
+	local WF = script.Parent.Parent.AimbotFrame
+	local ABBo = script.Parent.Parent.AimBotborder
+	local SABo = script.Parent.Parent.SilentAimborder
+	
+	ABB.MouseButton1Click:Connect(function()
+		if SAF.Visible == true or WF.Visible == true  then
+			ABF.Visible = true
+			SAF.Visible = false
+			WF.Visible = false
+			ABB.BackgroundColor3 = getgenv().BackGroundColor
+			SAB.BackgroundColor3 = getgenv().MainColor
+			ABBo.Visible = true
+			SABo.Visible = false
+		end
+	end)
+end
+coroutine.wrap(EJXGAI_fake_script)()
+local function QTAHLR_fake_script() -- HitPartDropDown.LocalScript 
+	local script = Instance.new('LocalScript', HitPartDropDown)
+
+	local Dropdown = script.Parent
+	local Icon = Dropdown.ImageLabel
+	local Holder = Dropdown.DDHolder
+	local D1 = Dropdown.DDHolder.D1
+	local D2 = Dropdown.DDHolder.D2
+	local D3 = Dropdown.DDHolder.D3
+	local Renderstepped = game:GetService('RunService').RenderStepped
+	
+	Dropdown.MouseButton1Click:Connect(function()
+		if getgenv().SilentAim.HitDropped == false then
+			D1.Visible = true
+			D2.Visible = true
+			D3.Visible = true
+			Holder.Visible = true
+			Icon.Image = 'http://www.roblox.com/asset/?id=9489839300'
+			Icon.Position = UDim2.new(0, 199, 0, 3)
+			getgenv().SilentAim.HitDropped = true
+		elseif getgenv().SilentAim.HitDropped == true then
+			D1.Visible = false
+			D2.Visible = false
+			D3.Visible = true
+			Holder.Visible = false
+			Icon.Image = 'http://www.roblox.com/asset/?id=9482956116'
+			Icon.Position = UDim2.new(0, 199, 0, 1)
+			getgenv().SilentAim.HitDropped = false
+		end
+		
+	end)
+	
+	while Renderstepped:Wait() do
+		if getgenv().SilentAim.HitDropped == false then
+			D1.Visible = false
+			D2.Visible = false
+			D3.Visible = false
+			Holder.Visible = false
+			Icon.Image = 'http://www.roblox.com/asset/?id=9482956116'
+		end
+		if getgenv().SilentAim.HitHead == true and getgenv().SilentAim.HitHRP == false and getgenv().SilentAim.HitRandom == false then
+			Dropdown.Text = ' Head'
+		elseif getgenv().SilentAim.HitHead == false and getgenv().SilentAim.HitHRP == true and getgenv().SilentAim.HitRandom == false then
+			Dropdown.Text = ' HumanoidRootPart'
+		elseif getgenv().SilentAim.HitHead == false and getgenv().SilentAim.HitHRP == false and getgenv().SilentAim.HitRandom == true then
+			Dropdown.Text = ' Random'
+		end
+		
+	end
+	
+end
+coroutine.wrap(QTAHLR_fake_script)()
+local function WGHZCDU_fake_script() -- D2.LocalScript 
+	local script = Instance.new('LocalScript', D2)
+
+	local Dropdown = script.Parent
+	local Icon = Dropdown.Parent.Parent.ImageLabel
+	local Renderstepped = game:GetService('RunService').RenderStepped
+	
+	Dropdown.MouseButton1Click:Connect(function()
+		getgenv().SilentAim.HitHead = false 
+		getgenv().SilentAim.HitHRP = true
+		getgenv().SilentAim.HitRandom = false
+	
+	end)
+	
+	
+	
+	local Tick = tick()
+	local Hue = 0
+	
+	while Renderstepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			if getgenv().SilentAim.HitHead == false and getgenv().SilentAim.HitHRP == true and getgenv().SilentAim.HitRandom == false and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+				script.Parent.TextColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+			elseif getgenv().SilentAim.HitHead == false and getgenv().SilentAim.HitHRP == true and getgenv().SilentAim.HitRandom == false and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+				script.Parent.TextColor3 = getgenv().AccentColor
+			else
+				script.Parent.TextColor3 = Color3.fromRGB(255,255,255)
+			end
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+end
+coroutine.wrap(WGHZCDU_fake_script)()
+local function NQLKVA_fake_script() -- D1.LocalScript 
+	local script = Instance.new('LocalScript', D1)
+
+	local Dropdown = script.Parent
+	local Icon = Dropdown.Parent.Parent.ImageLabel
+	local Renderstepped = game:GetService('RunService').RenderStepped
+	
+	Dropdown.MouseButton1Click:Connect(function()
+		getgenv().SilentAim.HitHead = true 
+		getgenv().SilentAim.HitHRP = false
+		getgenv().SilentAim.HitRandom = false
+		
+	end)
+	
+	
+	
+	local Tick = tick()
+	local Hue = 0
+	
+	while Renderstepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+			
+			if getgenv().SilentAim.HitHead == true and getgenv().SilentAim.HitHRP == false and getgenv().SilentAim.HitRandom == false and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			script.Parent.TextColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+			elseif getgenv().SilentAim.HitHead == true and getgenv().SilentAim.HitHRP == false and getgenv().SilentAim.HitRandom == false and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+				script.Parent.TextColor3 = getgenv().AccentColor
+			else
+				script.Parent.TextColor3 = Color3.fromRGB(255,255,255)
+			end
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+end
+coroutine.wrap(NQLKVA_fake_script)()
+local function SCPGLVM_fake_script() -- D3.LocalScript 
+	local script = Instance.new('LocalScript', D3)
+
+	local Dropdown = script.Parent
+	local Icon = Dropdown.Parent.Parent.ImageLabel
+	local Renderstepped = game:GetService('RunService').RenderStepped
+	
+	Dropdown.MouseButton1Click:Connect(function()
+		getgenv().SilentAim.HitHead = false 
+		getgenv().SilentAim.HitHRP = false
+		getgenv().SilentAim.HitRandom = true
+	
+	end)
+	
+	
+	
+	local Tick = tick()
+	local Hue = 0
+	
+	while Renderstepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			if getgenv().SilentAim.HitHead == false and getgenv().SilentAim.HitHRP == false and getgenv().SilentAim.HitRandom == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+				script.Parent.TextColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+			elseif getgenv().SilentAim.HitHead == false and getgenv().SilentAim.HitHRP == false and getgenv().SilentAim.HitRandom == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+				script.Parent.TextColor3 = getgenv().AccentColor
+			else
+				script.Parent.TextColor3 = Color3.fromRGB(255,255,255)
+			end
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+end
+coroutine.wrap(SCPGLVM_fake_script)()
+local function SSTYS_fake_script() -- Led4.LocalScript 
+	local script = Instance.new('LocalScript', Led4)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	
+	while game:GetService('RunService').RenderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+	
+end
+coroutine.wrap(SSTYS_fake_script)()
+local function UVVNNAC_fake_script() -- ALed4.Script 
+	local script = Instance.new('Script', ALed4)
+
+	while true do
+		if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			script.Parent.Visible = false
+			script.Parent.Parent["Led-4"].Visible = true
+		elseif getgenv().Rainbow_Off == true and getgenv().Rainbow_On == false then
+			script.Parent.Visible = true
+			script.Parent.Parent["Led-4"].Visible = false
+		end
+		wait()
+	end
+	
+end
+coroutine.wrap(UVVNNAC_fake_script)()
+local function IWIDODM_fake_script() -- AimbotVisuals.Script 
+	local script = Instance.new('Script', AimbotVisuals)
+
+	local ABVB = script.Parent
+	local ABSB = script.Parent.Parent.AimbotSettings
+	local ABSF = script.Parent.Parent.ABSFrame
+	local ABVF = script.Parent.Parent.ABVFrame
+	local ABSBo = script.Parent.Parent.ABSBorder
+	local ABVBo = script.Parent.Parent.ABVBorder
+	local WF = script.Parent.Parent.WFrame
+	
+	ABVB.MouseButton1Click:Connect(function()
+		if ABSF.Visible == true or WF.Visible == true then
+			ABVF.Visible = true
+			ABSF.Visible = false
+			WF.Visible = false
+			ABVB.BackgroundColor3 = getgenv().BackGroundColor
+			ABSB.BackgroundColor3 = getgenv().MainColor
+			ABVBo.Visible = true
+			ABSBo.Visible = false
+		end
+	end)
+end
+coroutine.wrap(IWIDODM_fake_script)()
+local function ZCYWOS_fake_script() -- AimbotSettings.Script 
+	local script = Instance.new('Script', AimbotSettings)
+
+	local ABSB = script.Parent
+	local ABVB = script.Parent.Parent.AimbotVisuals
+	local ABSF = script.Parent.Parent.ABSFrame
+	local ABVF = script.Parent.Parent.ABVFrame
+	local ABSBo = script.Parent.Parent.ABSBorder
+	local ABVBo = script.Parent.Parent.ABVBorder
+	local WF = script.Parent.Parent.WFrame
+	
+	
+	
+	ABSB.MouseButton1Click:Connect(function()
+		if ABVF.Visible == true or WF.Visible == true then
+			ABSF.Visible = true
+			ABVF.Visible = false
+			WF.Visible = false
+			ABSB.BackgroundColor3 = getgenv().BackGroundColor
+			ABVB.BackgroundColor3 = getgenv().MainColor
+			ABSBo.Visible = true
+			ABVBo.Visible = false
+		end
+	end)
+end
+coroutine.wrap(ZCYWOS_fake_script)()
+local function KHYSJNM_fake_script() -- Led5.LocalScript 
+	local script = Instance.new('LocalScript', Led5)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	
+	while game:GetService('RunService').RenderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+	
+end
+coroutine.wrap(KHYSJNM_fake_script)()
+local function GXXNBSN_fake_script() -- ALed5.Script 
+	local script = Instance.new('Script', ALed5)
+
+	while true do
+		if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			script.Parent.Visible = false
+			script.Parent.Parent["Led-5"].Visible = true
+		elseif getgenv().Rainbow_Off == true and getgenv().Rainbow_On == false then
+			script.Parent.Visible = true
+			script.Parent.Parent["Led-5"].Visible = false
+		end
+		wait()
+	end
+	
+end
+coroutine.wrap(GXXNBSN_fake_script)()
+local function NEWMVF_fake_script() -- Title.LocalScript 
+	local script = Instance.new('LocalScript', Title)
+
+	
+	script.Parent.BackgroundTransparency = 1
+	
+	
+	if game.PlaceId == 6297822481 or game.PlaceId == 6725802681 then
+		script.Parent.Text = 'InL | Titan Warfare'
+	elseif game.PlaceId == 7378813434 then
+		script.Parent.Text = 'InL | Cotton Obby'
+	elseif game.PlaceId == 155615604 then
+		script.Parent.Text = 'InL | Prison Life'
+	else
+		script.Parent.Text = 'InL | Universal Scripts'
+	
+	end
+end
+coroutine.wrap(NEWMVF_fake_script)()
+local function ZEHE_fake_script() -- MiscButton.MiscScript 
+	local script = Instance.new('Script', MiscButton)
+
+	MB = script.Parent
+	MF = MB.Parent.MiscFrame
+	CB = MB.Parent.CombatButton
+	CF = MB.Parent.CombatFrame
+	VF = MB.Parent.VisualFrame
+	VB = MB.Parent.VisualButton
+	BB = MB.Parent.BlatantButton
+	BF = MB.Parent.BlatantFrame
+	SF = MB.Parent.SettingsFrame
+	SB = MB.Parent.SettingsButton
+	WF = MB.Parent.WelcomeFrame
+	BBo = MB.Parent.BlatantBorder
+	CBo = MB.Parent.CombatBorder
+	VBo = MB.Parent.VisualBorder
+	MBo = MB.Parent.MiscBorder
+	SBo = MB.Parent.SettingsBorder
+	
+	MB.MouseButton1Click:Connect(function(C)
+		MB.BackgroundColor3 = getgenv().MainColor
+		if MF.Visible == false  then
+			if VF.Visible == true or BF.Visible == true or CF.Visible == true or SF.Visible == true or WF.Visible == true  then
+				BF.Visible = false
+				CF.Visible = false
+				SF.Visible = false
+				WF.Visible = false
+				VF.Visible = false
+				BBo.Visible = false
+				CBo.Visible = false
+				VBo.Visible = false
+				MBo.Visible = true
+				SBo.Visible = false
+				VB.BackgroundColor3 = getgenv().BackGroundColor
+				BB.BackgroundColor3 = getgenv().BackGroundColor
+				CB.BackgroundColor3 = getgenv().BackGroundColor
+				SB.BackgroundColor3 = getgenv().BackGroundColor	
+				MF.Visible = true
+			end
+		end
+	end)
+end
+coroutine.wrap(ZEHE_fake_script)()
+local function BCEVVL_fake_script() -- CombatButton.CombatScript 
+	local script = Instance.new('Script', CombatButton)
+
+	CB = script.Parent
+	CF = CB.Parent.CombatFrame
+	VF = CB.Parent.VisualFrame
+	VB = CB.Parent.VisualButton
+	BB = CB.Parent.BlatantButton
+	BF = CB.Parent.BlatantFrame
+	MF = CB.Parent.MiscFrame
+	MB = CB.Parent.MiscButton
+	SF = CB.Parent.SettingsFrame
+	SB = CB.Parent.SettingsButton
+	WF = CB.Parent.WelcomeFrame
+	BBo = CB.Parent.BlatantBorder
+	CBo = CB.Parent.CombatBorder
+	VBo = CB.Parent.VisualBorder
+	MBo = CB.Parent.MiscBorder
+	SBo = CB.Parent.SettingsBorder
+	
+	
+	CB.MouseButton1Click:Connect(function(C)
+	
+		CB.BackgroundColor3 = getgenv().MainColor
+		if CF.Visible == false  then
+			if VF.Visible == true or BF.Visible == true or MF.Visible == true or SF.Visible == true or WF.Visible == true  then
+				BF.Visible = false
+				MF.Visible = false
+				SF.Visible = false
+				WF.Visible = false
+				VF.Visible = false
+				BBo.Visible = false
+				CBo.Visible = true
+				VBo.Visible = false
+				MBo.Visible = false
+				SBo.Visible = false
+				VB.BackgroundColor3 = getgenv().BackGroundColor
+				BB.BackgroundColor3 = getgenv().BackGroundColor
+				MB.BackgroundColor3 = getgenv().BackGroundColor
+				SB.BackgroundColor3 = getgenv().BackGroundColor
+				CF.Visible = true
+				
+			end
+		end
+	end)
+end
+coroutine.wrap(BCEVVL_fake_script)()
+local function RNJBQRI_fake_script() -- VisualButton.VisualScript 
+	local script = Instance.new('Script', VisualButton)
+
+	VB = script.Parent
+	VF = VB.Parent.VisualFrame
+	MF = VB.Parent.MiscFrame
+	MB = VB.Parent.MiscButton
+	WF = VB.Parent.WelcomeFrame
+	CF = VB.Parent.CombatFrame
+	CB = VB.Parent.CombatButton
+	BB = VB.Parent.BlatantButton
+	BF = VB.Parent.BlatantFrame
+	SF = VB.Parent.SettingsFrame
+	SB = VB.Parent.SettingsButton
+	BBo = VB.Parent.BlatantBorder
+	CBo = VB.Parent.CombatBorder
+	VBo = VB.Parent.VisualBorder
+	MBo = VB.Parent.MiscBorder
+	SBo = VB.Parent.SettingsBorder
+	
+	
+	
+	
+	
+	VB.MouseButton1Click:Connect(function()
+		VB.BackgroundColor3 = getgenv().MainColor
+		if VF.Visible == false  then
+			if MF.Visible == true or BF.Visible == true or CF.Visible == true or SF.Visible == true or WF.Visible == true  then
+				BF.Visible = false
+				CF.Visible = false
+				SF.Visible = false
+				WF.Visible = false
+				MF.Visible = false
+				BBo.Visible = false
+				CBo.Visible = false
+				VBo.Visible = true
+				MBo.Visible = false
+				SBo.Visible = false
+				MB.BackgroundColor3 = getgenv().BackGroundColor
+				BB.BackgroundColor3 = getgenv().BackGroundColor
+				CB.BackgroundColor3 = getgenv().BackGroundColor
+				SB.BackgroundColor3 = getgenv().BackGroundColor
+				VF.Visible = true
+			end
+		end
+	end)
+end
+coroutine.wrap(RNJBQRI_fake_script)()
+local function EWQII_fake_script() -- SettingsButton.SettingsScript 
+	local script = Instance.new('Script', SettingsButton)
+
+	SB = script.Parent
+	CB = SB.Parent.CombatButton
+	CF = SB.Parent.CombatFrame
+	VF = SB.Parent.VisualFrame
+	VB = SB.Parent.VisualButton
+	BF = SB.Parent.BlatantFrame
+	MF = SB.Parent.MiscFrame
+	MB = SB.Parent.MiscButton
+	SF = SB.Parent.SettingsFrame
+	BB = SB.Parent.BlatantButton
+	WF = SB.Parent.WelcomeFrame
+	BBo = SB.Parent.BlatantBorder
+	CBo = SB.Parent.CombatBorder
+	VBo = SB.Parent.VisualBorder
+	MBo = SB.Parent.MiscBorder
+	SBo = SB.Parent.SettingsBorder
+	
+	
+	
+	SB.MouseButton1Click:Connect(function(C)
+	
+		SB.BackgroundColor3 = getgenv().MainColor
+		if SF.Visible == false  then
+			if VF.Visible == true or CF.Visible == true or MF.Visible == true or BF.Visible == true or WF.Visible == true  then
+				CF.Visible = false
+				MF.Visible = false
+				BF.Visible = false
+				WF.Visible = false
+				VF.Visible = false
+				BBo.Visible = false
+				CBo.Visible = false
+				VBo.Visible = false
+				MBo.Visible = false
+				SBo.Visible = true
+				VB.BackgroundColor3 = getgenv().BackGroundColor
+				CB.BackgroundColor3 = getgenv().BackGroundColor
+				MB.BackgroundColor3 = getgenv().BackGroundColor
+				BB.BackgroundColor3 = getgenv().BackGroundColor
+				SF.Visible = true
+	
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(EWQII_fake_script)()
+local function BUXRMNG_fake_script() -- BlatantButton.BlatantScript 
+	local script = Instance.new('Script', BlatantButton)
+
+	BB = script.Parent
+	CB = BB.Parent.CombatButton
+	CF = BB.Parent.CombatFrame
+	VF = BB.Parent.VisualFrame
+	VB = BB.Parent.VisualButton
+	BF = BB.Parent.BlatantFrame
+	MF = BB.Parent.MiscFrame
+	MB = BB.Parent.MiscButton
+	SF = BB.Parent.SettingsFrame
+	SB = BB.Parent.SettingsButton
+	WF = BB.Parent.WelcomeFrame
+	BBo = BB.Parent.BlatantBorder
+	CBo = BB.Parent.CombatBorder
+	VBo = BB.Parent.VisualBorder
+	MBo = BB.Parent.MiscBorder
+	SBo = BB.Parent.SettingsBorder
+	
+	BB.MouseButton1Click:Connect(function(C)
+	
+		BB.BackgroundColor3 = getgenv().MainColor
+	
+		if BF.Visible == false  then
+			if VF.Visible == true or CF.Visible == true or MF.Visible == true or SF.Visible == true or WF.Visible == true  then
+				CF.Visible = false
+				MF.Visible = false
+				SF.Visible = false
+				WF.Visible = false
+				VF.Visible = false
+				BBo.Visible = true
+				CBo.Visible = false
+				VBo.Visible = false
+				MBo.Visible = false
+				SBo.Visible = false
+				VB.BackgroundColor3 = getgenv().BackGroundColor
+				CB.BackgroundColor3 = getgenv().BackGroundColor
+				MB.BackgroundColor3 = getgenv().BackGroundColor
+				SB.BackgroundColor3 = getgenv().BackGroundColor	
+				BF.Visible = true
+	
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(BUXRMNG_fake_script)()
+local function MOPXYA_fake_script() -- SecondaryFrame.ColorControl 
+	local script = Instance.new('Script', SecondaryFrame)
+
+	script.Parent.Parent.BackgroundColor3 = getgenv().MainColor
+	script.Parent.Parent.BorderColor3 = getgenv().OutLineColor
+	script.Parent.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.BorderColor3 = getgenv().OutLineColor
+	script.Parent.BlatantBorder.BackgroundColor3 = getgenv().MainColor
+	script.Parent.CombatBorder.BackgroundColor3 = getgenv().MainColor
+	script.Parent.VisualBorder.BackgroundColor3 = getgenv().MainColor
+	script.Parent.MiscBorder.BackgroundColor3 = getgenv().MainColor
+	script.Parent.SettingsBorder.BackgroundColor3 = getgenv().MainColor
+	script.Parent.CombatFrame.BackgroundColor3 = getgenv().MainColor
+	script.Parent.CombatFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.VisualFrame.BackgroundColor3 = getgenv().MainColor
+	script.Parent.VisualFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.BlatantFrame.BackgroundColor3 = getgenv().MainColor
+	script.Parent.BlatantFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.MiscFrame.BackgroundColor3 = getgenv().MainColor
+	script.Parent.MiscFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.SettingsFrame.BackgroundColor3 = getgenv().MainColor
+	script.Parent.SettingsFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.WelcomeFrame.BackgroundColor3 = getgenv().MainColor
+	script.Parent.WelcomeFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.BlatantButton.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.BlatantButton.BorderColor3 = getgenv().OutLineColor
+	script.Parent.CombatButton.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatButton.BorderColor3 = getgenv().OutLineColor
+	script.Parent.MiscButton.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.MiscButton.BorderColor3 = getgenv().OutLineColor
+	script.Parent.SettingsButton.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.SettingsButton.BorderColor3 = getgenv().OutLineColor
+	script.Parent.VisualButton.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.VisualButton.BorderColor3 = getgenv().OutLineColor
+	script.Parent.Title.BackgroundColor3 = getgenv().MainColor
+	script.Parent.Parent.BorderColor3 = getgenv().AccentColor
+	---------------Leds---------------------------------------------------------------------------------
+	script.Parent.VisualFrame["ALed-2"].BackgroundColor3 = getgenv().AccentColor
+	script.Parent.VisualFrame["ALed-1"].BackgroundColor3 = getgenv().AccentColor
+	script.Parent.CombatFrame["ALed-4"].BackgroundColor3 = getgenv().AccentColor
+	script.Parent.SettingsFrame.UISettings["ALED-3"].BackgroundColor3 = getgenv().AccentColor
+	script.Parent.CombatFrame["ALed-5"].BackgroundColor3 = getgenv().AccentColor
+	---------------VisualFrame------------------------------------------------------------------------------------
+	script.Parent.VisualFrame.ESPFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.VisualFrame.ESPFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.VisualFrame.ESPWelcomeFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.VisualFrame.ESPWelcomeFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.VisualFrame.ESPWelcomeFrame.ESPINFO.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.VisualFrame.ESPFrame["Box ESP"].BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.VisualFrame.ESPborder.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.VisualFrame.SETFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.VisualFrame.SETFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.VisualFrame.Setborder.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.VisualFrame.ESP.BackgroundColor3 = getgenv().MainColor
+	script.Parent.VisualFrame.ESP.BorderColor3 = getgenv().OutLineColor
+	script.Parent.VisualFrame.ESPSettings.BackgroundColor3 = getgenv().MainColor
+	script.Parent.VisualFrame.ESPSettings.BorderColor3 = getgenv().OutLineColor
+	script.Parent.VisualFrame.Frame.BackgroundColor3 = getgenv().BackGroundColor
+	
+	
+	
+	
+end
+coroutine.wrap(MOPXYA_fake_script)()
+local function DSEPH_fake_script() -- SecondaryFrame.ColorControl2 
+	local script = Instance.new('Script', SecondaryFrame)
+
+	--------------SettingsFrame---------------------------------------------------------------------------------------------------------------------
+	script.Parent.SettingsFrame.UISettings.MainColor.MainColor.BackgroundColor3 = getgenv().MainColor
+	script.Parent.SettingsFrame.UISettings.BBC.BackGroundColor.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.SettingsFrame.UISettings.OutlineColor.OutlineColor.BackgroundColor3 = getgenv().OutLineColor
+	script.Parent.SettingsFrame.UISettings.AccentColor.AccentColor.BackgroundColor3 = getgenv().AccentColor
+	script.Parent.SettingsFrame.UISettings["Rainbow Accent Color"]["ColorChange-off"].BackgroundColor3 = Color3.fromRGB(255,255,255)
+	script.Parent.SettingsFrame.UISettings["Rainbow Accent Color"]["ColorChange-off"].BorderColor3 = Color3.fromRGB(0,0,0)
+	script.Parent.SettingsFrame.UISettings["Rainbow Accent Color"]["ColorChange-on"].BorderColor3 = Color3.fromRGB(0,0,0)
+	script.Parent.SettingsFrame.UISettings["ALED-3"].BackgroundColor3 = getgenv().AccentColor
+	script.Parent.SettingsFrame.UISettings.BackgroundColor3 = getgenv().BackGroundColor
+	------------CombatFrame--------------------------------------------------------------------------------------------------------------------
+	script.Parent.CombatFrame.AimbotFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.AimBotFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.SilentAimFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.AimBotborder.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.SilentAimborder.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.AimBotFrame.FOV_Slider.BackgroundColor3 = getgenv().MainColor
+	script.Parent.CombatFrame.AimBotFrame.FOV_Slider.BorderColor3 = getgenv().OutLineColor
+	script.Parent.CombatFrame.AimBotFrame.FOV_Slider.InnerSliderA.BackgroundColor3 = getgenv().AccentColor
+	
+	script.Parent.CombatFrame.Aimbot.BackgroundColor3 = getgenv().MainColor
+	script.Parent.CombatFrame["Silent Aim"].BackgroundColor3 = getgenv().MainColor
+	script.Parent.CombatFrame.ABSFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.ABVFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.ABSFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.CombatFrame.ABVFrame.BorderColor3 = getgenv().OutLineColor
+	script.Parent.CombatFrame.AimbotSettings.BackgroundColor3 = getgenv().MainColor
+	script.Parent.CombatFrame.AimbotVisuals.BackgroundColor3 = getgenv().MainColor
+	script.Parent.CombatFrame.AimbotSettings.BorderColor3 = getgenv().OutLineColor
+	script.Parent.CombatFrame.AimbotVisuals.BorderColor3 = getgenv().OutLineColor
+	script.Parent.CombatFrame.ABVBorder.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.ABSBorder.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.AimBotborder.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.SilentAimborder.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.SilentAimFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.ABSFrame.BackgroundColor3 = getgenv().BackGroundColor
+	script.Parent.CombatFrame.ABVFrame.BackgroundColor3 = getgenv().BackGroundColor
+end
+coroutine.wrap(DSEPH_fake_script)()
+local function EPDGN_fake_script() -- ESP.Script 
+	local script = Instance.new('Script', ESP)
+
+	local ESPB = script.Parent
+	local ESPF = ESPB.Parent.ESPFrame
+	local ESPBo = ESPB.Parent.ESPborder
+	local SETB = ESPB.Parent.ESPSettings
+	local SETF = ESPB.Parent.SETFrame
+	local SETBo = ESPB.Parent.Setborder
+	local WF = ESPB.Parent.ESPWelcomeFrame
+	
+	ESPB.MouseButton1Click:Connect(function()
+		if SETF.Visible == true or WF.Visible == true  then
+			SETF.Visible = false
+			WF.Visible = false
+			ESPF.Visible = true
+			ESPB.BackgroundColor3 = getgenv().BackGroundColor
+			SETB.BackgroundColor3 = getgenv().MainColor
+			ESPBo.Visible = true
+			SETBo.Visible = false
+		end
+	end)
+end
+coroutine.wrap(EPDGN_fake_script)()
+local function WAPEUZJ_fake_script() -- ESPSettings.Script 
+	local script = Instance.new('Script', ESPSettings)
+
+	local SETB = script.Parent
+	local ESPF = SETB.Parent.ESPFrame
+	local ESPBo = SETB.Parent.ESPborder
+	local ESPB = SETB.Parent.ESP
+	local SETF = SETB.Parent.SETFrame
+	local SETBo = SETB.Parent.Setborder
+	local WF = SETB.Parent.ESPWelcomeFrame
+	
+	
+	SETB.MouseButton1Click:Connect(function()
+			if ESPF.Visible == true or WF.Visible == true  then
+			SETF.Visible = true
+			ESPF.Visible = false
+			WF.Visible = false
+			ESPB.BackgroundColor3 = getgenv().MainColor
+			SETB.BackgroundColor3 = getgenv().BackGroundColor
+			ESPBo.Visible = false
+			SETBo.Visible = true
+		end
+	end)
+end
+coroutine.wrap(WAPEUZJ_fake_script)()
+local function JWXQZ_fake_script() -- Led1.LocalScript 
+	local script = Instance.new('LocalScript', Led1)
+
+	local Tick = tick()
+	
+	local Hue = 0
+	
+	
+	while game:GetService('RunService').RenderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+	
+end
+coroutine.wrap(JWXQZ_fake_script)()
+local function LURVW_fake_script() -- ALed1.Script 
+	local script = Instance.new('Script', ALed1)
+
+	while true do
+		if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			script.Parent.Visible = false
+			script.Parent.Parent["Led-1"].Visible = true
+		elseif getgenv().Rainbow_Off == true and getgenv().Rainbow_On == false then
+			script.Parent.Visible = true
+			script.Parent.Parent["Led-1"].Visible = false
+		end
+		wait()
+	end
+	
+end
+coroutine.wrap(LURVW_fake_script)()
+local function PEFADJR_fake_script() -- ALed2.Script 
+	local script = Instance.new('Script', ALed2)
+
+	while true do
+		if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			script.Parent.Visible = false
+			script.Parent.Parent["Led-2"].Visible = true
+		elseif getgenv().Rainbow_Off == true and getgenv().Rainbow_On == false then
+			script.Parent.Visible = true
+			script.Parent.Parent["Led-2"].Visible = false
+		end
+		wait()
+	end
+	
+end
+coroutine.wrap(PEFADJR_fake_script)()
+local function IOXJZ_fake_script() -- Led2.LocalScript 
+	local script = Instance.new('LocalScript', Led2)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	
+	while game:GetService('RunService').RenderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+	
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+	
+end
+coroutine.wrap(IOXJZ_fake_script)()
+local function TRJIAFK_fake_script() -- TeamCheckToggle_2.Script 
+	local script = Instance.new('Script', TeamCheckToggle_2)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().ESP.TeamCheck == false then
+	
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+	
+			getgenv().ESP.TeamCheck = true
+		elseif getgenv().ESP.TeamCheck == true then
+	
+			Toggle = false
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().ESP.TeamCheck = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().ESP.TeamCheck == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().ESP.TeamCheck == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(TRJIAFK_fake_script)()
+local function XPJC_fake_script() -- VisibilityCheckToggle_2.Script 
+	local script = Instance.new('Script', VisibilityCheckToggle_2)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().ESP.VisibleCheck == false then
+	
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+	
+			getgenv().ESP.VisibleCheck = true
+		elseif getgenv().ESP.VisibleCheck == true then
+	
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().ESP.VisibleCheck = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().ESP.VisibleCheck == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().ESP.VisibleCheck == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+				
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(XPJC_fake_script)()
+local function YSUIHSA_fake_script() -- DistanceDropDown.LocalScript 
+	local script = Instance.new('LocalScript', DistanceDropDown)
+
+	local Dropdown = script.Parent
+	local Icon = Dropdown.ImageLabel
+	local Holder = Dropdown.DDHolder
+	local D1 = Dropdown.DDHolder.D1
+	local D2 = Dropdown.DDHolder.D2
+	local D3 = Dropdown.DDHolder.D3
+	local Renderstepped = game:GetService('RunService').RenderStepped
+	
+	Dropdown.MouseButton1Click:Connect(function()
+		if getgenv().ESP.Dropped == false then
+			D1.Visible = true
+			D2.Visible = true
+			D3.Visible = true
+			Holder.Visible = true
+			Icon.Image = 'http://www.roblox.com/asset/?id=9489839300'
+			Icon.Position = UDim2.new(0, 199, 0, 3)
+			getgenv().ESP.Dropped = true
+		elseif getgenv().ESP.Dropped == true then
+			D1.Visible = false
+			D2.Visible = false
+			D3.Visible = false
+			Holder.Visible = false
+			Icon.Image = 'http://www.roblox.com/asset/?id=9482956116'
+			Icon.Position = UDim2.new(0, 199, 0, 1)
+			getgenv().ESP.Dropped = false
+		end
+		
+	end)
+	
+	while Renderstepped:Wait() do
+		if getgenv().ESP.Dropped == false then
+			D1.Visible = false
+			D2.Visible = false
+			D3.Visible = false
+			Holder.Visible = false
+			Icon.Image = 'http://www.roblox.com/asset/?id=9482956116'
+		end
+		if getgenv().ESP.Default == true and getgenv().ESP.DistancefromCharacter == false and getgenv().ESP.DistancefromCamera == false then
+			Dropdown.Text = ' Default'
+		elseif getgenv().ESP.DistancefromCharacter == true and getgenv().ESP.Default == false and getgenv().ESP.DistancefromCamera == false then
+			Dropdown.Text = ' Distance From Char'
+		elseif  getgenv().ESP.DistancefromCamera == true and getgenv().ESP.DistancefromCharacter == false and getgenv().ESP.Default == false then
+			Dropdown.Text = ' Distance From Camera'
+		end
+		
+	end
+	
+end
+coroutine.wrap(YSUIHSA_fake_script)()
+local function YWIW_fake_script() -- D2_2.LocalScript 
+	local script = Instance.new('LocalScript', D2_2)
+
+	local Dropdown = script.Parent
+	local Icon = Dropdown.Parent.Parent.ImageLabel
+	local Renderstepped = game:GetService('RunService').RenderStepped
+	
+	Dropdown.MouseButton1Click:Connect(function()
+		getgenv().ESP.DistancefromCharacter = true
+		getgenv().ESP.Default = false
+		getgenv().ESP.DistancefromCamera = false
+	end)
+	
+	
+	
+	local Tick = tick()
+	local Hue = 0
+	
+	while Renderstepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			if getgenv().ESP.DistancefromCharacter == true and getgenv().ESP.Default == false and getgenv().ESP.DistancefromCamera == false and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+				script.Parent.TextColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+			elseif getgenv().ESP.DistancefromCharacter == true and getgenv().ESP.Default == false and getgenv().ESP.DistancefromCamera == false and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+				script.Parent.TextColor3 = getgenv().AccentColor
+			else
+				script.Parent.TextColor3 = Color3.fromRGB(255,255,255)
+			end
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+end
+coroutine.wrap(YWIW_fake_script)()
+local function TXTB_fake_script() -- D3_2.LocalScript 
+	local script = Instance.new('LocalScript', D3_2)
+
+	local Dropdown = script.Parent
+	local Icon = Dropdown.Parent.Parent.ImageLabel
+	local Renderstepped = game:GetService('RunService').RenderStepped
+	
+	Dropdown.MouseButton1Click:Connect(function()
+		getgenv().ESP.DistancefromCamera = true
+		getgenv().ESP.DistancefromCharacter = false
+		getgenv().ESP.Default = false
+	end)
+	
+	
+	
+	local Tick = tick()
+	local Hue = 0
+	
+	while Renderstepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+	
+			if getgenv().ESP.DistancefromCamera == true and getgenv().ESP.DistancefromCharacter == false and getgenv().ESP.Default == false and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false  then
+				script.Parent.TextColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+			elseif getgenv().ESP.DistancefromCamera == true and getgenv().ESP.DistancefromCharacter == false and getgenv().ESP.Default == false and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+				script.Parent.TextColor3 = getgenv().AccentColor
+			else
+				script.Parent.TextColor3 = Color3.fromRGB(255,255,255)
+			end
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+end
+coroutine.wrap(TXTB_fake_script)()
+local function IYKMW_fake_script() -- D1_2.LocalScript 
+	local script = Instance.new('LocalScript', D1_2)
+
+	local Dropdown = script.Parent
+	local Icon = Dropdown.Parent.Parent.ImageLabel
+	local Renderstepped = game:GetService('RunService').RenderStepped
+	
+	Dropdown.MouseButton1Click:Connect(function()
+		getgenv().ESP.Default = true
+		getgenv().ESP.DistancefromCharacter = false
+		getgenv().ESP.DistancefromCamera = false
+		
+	end)
+	
+	
+	
+	local Tick = tick()
+	local Hue = 0
+	
+	while Renderstepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60) then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+			
+			if getgenv().ESP.Default == true and getgenv().ESP.DistancefromCharacter == false and getgenv().ESP.DistancefromCamera == false and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			script.Parent.TextColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+			elseif getgenv().ESP.Default == true and getgenv().ESP.DistancefromCharacter == false and getgenv().ESP.DistancefromCamera == false and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+				script.Parent.TextColor3 = getgenv().AccentColor
+			else
+				script.Parent.TextColor3 = Color3.fromRGB(255,255,255)
+			end
+			Tick = tick() -- Updates the time the previous loop ends
+	
+	
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+end
+coroutine.wrap(IYKMW_fake_script)()
+local function EEUJQ_fake_script() -- BoxToggle.LocalScript 
+	local script = Instance.new('LocalScript', BoxToggle)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().ESP.Boxes == false then
+			
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+	
+			getgenv().ESP.Boxes = true
+			
+		elseif getgenv().ESP.Boxes == true then
+	
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().ESP.Boxes = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().ESP.Boxes == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().ESP.Boxes == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+	
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(EEUJQ_fake_script)()
+local function ZYGM_fake_script() -- NameToggle.LocalScript 
+	local script = Instance.new('LocalScript', NameToggle)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().ESP.Name == false then
+	
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+			getgenv().ESP.Name = true
+		elseif getgenv().ESP.Name == true then
+	
+			Toggle = false
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().ESP.Name = false
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().ESP.Name == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().ESP.Name == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+	
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(ZYGM_fake_script)()
+local function QOJMOT_fake_script() -- Distoggle.LocalScript 
+	local script = Instance.new('LocalScript', Distoggle)
+
+	
+	local Tick = tick()
+	local Hue = 0
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().ESP.DisplayDistance == false then
+	
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+			
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+			
+			getgenv().ESP.DisplayDistance = true
+		elseif getgenv().ESP.DisplayDistance == true then
+	
+			Toggle = false
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().ESP.DisplayDistance = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().ESP.DisplayDistance == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().ESP.DisplayDistance == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+				
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+	
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+	
+end
+coroutine.wrap(QOJMOT_fake_script)()
+local function ITYUM_fake_script() -- HealthBarToggle.LocalScript 
+	local script = Instance.new('LocalScript', HealthBarToggle)
+
+	local Tick = tick()
+	local Hue = 0
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().ESP.HealthBar == false then
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+			getgenv().ESP.HealthBar = true
+		elseif getgenv().ESP.HealthBar == true then
+	
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().ESP.HealthBar = false
+	
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().ESP.HealthBar == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().ESP.HealthBar == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+	
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(ITYUM_fake_script)()
+local function AVYYLYD_fake_script() -- ShowHealthToggle.LocalScript 
+	local script = Instance.new('LocalScript', ShowHealthToggle)
+
+	local Toggle = false
+	local Tick = tick()
+	local Hue = 0
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if getgenv().ESP.ShowHealth == false then
+			
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+			elseif getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+			end
+			getgenv().ESP.ShowHealth = true
+		elseif Tetgenv().ESP.ShowHealth == true then
+	
+			Toggle = false
+			script.Parent.BackgroundColor3 = getgenv().MainColor
+			getgenv().ESP.ShowHealth = false
+		end
+	end)
+	
+	while game:GetService('RunService').RenderStepped:Wait() do
+	
+		if tick() - Tick >= (1/60) then 
+			Hue = Hue + (1/400)
+	
+			if Hue >= 1 then
+				Hue = 0
+			end
+	
+			if getgenv().ESP.ShowHealth == true and getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then
+	
+				script.Parent.BackgroundColor3 = Color3.fromHSV(Hue, 0.8, 1) 
+				
+			elseif getgenv().ESP.ShowHealth == true and getgenv().Rainbow_On == false and getgenv().Rainbow_Off == true then
+	
+				script.Parent.BackgroundColor3 = getgenv().AccentColor
+	
+			end
+	
+			Tick = tick() 
+	
+		end	
+	end
+end
+coroutine.wrap(AVYYLYD_fake_script)()
+local function HMZZL_fake_script() -- MainFrame.LocalScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local Tick = tick()
+	
+	local Hue = 0
+	
+	
+	while game:GetService('RunService').RenderStepped:Wait() do -- Service runs every time prior to a frame being rendered, Waits for the service to end before running again.
+		if tick() - Tick >= (1/60)  then -- If time passed since the previous loop ended in greater than or equal to 1/60 then:
+			
+			Hue = Hue + (1/400) -- Increases Hue value by 1/400 every loop
+	
+			if Hue >= 1 then -- If Hue reaches the max Hue value(1) then
+				Hue = 0 -- Reset Hue back to 0
+			end
+			if getgenv().Rainbow_On == true and getgenv().Rainbow_Off == false then 
+				script.Parent.BorderColor3 = Color3.fromHSV(Hue, 0.8, 1) -- Changes the Color every loop - Creates the rainbow accent color.
+			end
+			Tick = tick() -- Updates the time the previous loop ends
+			
+			if getgenv().Rainbow_Off == true and getgenv().Rainbow_On == false then
+			script.Parent.BorderColor3 = getgenv().AccentColor
+			end
+			Tick = tick()
+		end	
+	end
+	
+	
+	-- 'tick() - Tick' Creates a Sum that is the time passed since the previous loop ended
+	
+	
+	
+end
+coroutine.wrap(HMZZL_fake_script)()
