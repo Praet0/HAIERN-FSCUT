@@ -1,3 +1,4 @@
+local Status, Errormessagee = pcall(function()
 getgenv().PTR = {}
 getgenv().ESP = {
 	Boxes = false,
@@ -5304,3 +5305,7 @@ local function KHEON_fake_script() -- MainFrame.LocalScript
 	
 end
 coroutine.wrap(KHEON_fake_script)()
+end
+
+print(Errormessagee)
+warn(Errormessagee)
