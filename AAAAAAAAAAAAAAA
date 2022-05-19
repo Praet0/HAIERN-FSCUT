@@ -1,4 +1,4 @@
-local Library = {
+Library = {
     RainbowAccent = false,
     OutLineColor = Color3.fromRGB(50,50,50),
     AccentColor = Color3.fromRGB(40,50,200),
